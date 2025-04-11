@@ -1,520 +1,535 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<title>Portfolio – Damian Laird</title>
-<link href="style.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Portfolio – Damian Laird</title>
+    <link rel="stylesheet" Lstyle.css>
+    <link rel="stylesheet" Lhttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css>
+    <link Lhttps://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Damian Laird – Portfolio Digital</h1>
-<p>
-<a href="documents/cv_damian laird_imad_2025final.pdf" target="_blank">
-<i class="fas fa-file-pdf"></i> Télécharger mon CV
+    <header>
+        <h1>Damian Laird – Portfolio Digital</h1>
+        <p>
+            <a Ldocuments/CV_Damian Laird_IMAD_2025FINAL.pdf target="_blank">
+                <i class="fas fa-file-pdf"></i> Télécharger mon CV
             </a>
-</p>
-</header>
-<nav>
-<div class="hamburger" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-<ul>
-<li><a href="#intro">Accueil</a></li>
-<li><a href="#parcours">Parcours</a></li>
-<li><a href="#competences">Compétences</a></li>
-<li><a href="#projets">Projets</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-<main>
-<section id="intro">
-<h2>Bienvenue</h2>
-<p>Bienvenue sur mon portfolio professionnel. Vous y trouverez une synthèse de mon parcours, mes compétences et mes projets dans le domaine de la formation digitale.</p>
-</section>
-<section id="parcours">
-<h2>Mon parcours</h2>
-<p>Plusieurs années d'expérience à l'intersection de la pédagogie, du numérique et de la gouvernance associative.</p>
-</section>
-<section id="competences">
-<h2>Compétences</h2>
-<ul>
-<li>UX/UI appliqué à la pédagogie</li>
-<li>Ingénierie de formation</li>
-<li>Gestion de projet digital</li>
-<li>Accompagnement au changement</li>
-</ul>
-</section>
-<section id="projets">
-<h2>Projets</h2>
-<article>
-<h3>Projet 1 : Refonte du site web</h3>
-<!-- Slider for Projet 1: Refonte du site web -->
-<div class="slideshow-container" id="slider-site-web">
-<div class="slide fade">
-<img alt="Capture d'écran 2019" onclick="openLightbox(this)" src="images/2019_app_website.jpg" style="width:100%"/>
-<div class="caption">Ancien site web 2011-2019</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran 2020 accueil" onclick="openLightbox(this)" src="images/2020_app accueil.jpg" style="width:100%"/>
-<div class="caption">Site web 2020-2022</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran 2020 accueil 2" onclick="openLightbox(this)" src="images/2020_app accueil 2.jpg" style="width:100%"/>
-<div class="caption">Site web 2020-2022</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran 2025 accueil" onclick="openLightbox(this)" src="images/2025_app_accueil.jpg" style="width:100%"/>
-<div class="caption">Site web 2022-2025</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran prototype 2025" onclick="openLightbox(this)" src="images/25_prototype_acc.jpg" style="width:100%"/>
-<div class="caption">(Prototype) Site web 2025</div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="plusSlides(-1, 'slider-site-web')">❮</a>
-<a class="next" onclick="plusSlides(1, 'slider-site-web')">❯</a>
-</div>
-<br/>
-<!-- Points indicators -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1, 'slider-site-web')"></span>
-<span class="dot" onclick="currentSlide(2, 'slider-site-web')"></span>
-<span class="dot" onclick="currentSlide(3, 'slider-site-web')"></span>
-<span class="dot" onclick="currentSlide(4, 'slider-site-web')"></span>
-<span class="dot" onclick="currentSlide(5, 'slider-site-web')"></span>
-</div>
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-<span class="close">×</span>
-<img class="lightbox-content" id="lightbox-img"/>
-</div>
-<button class="accordion">Contexte</button>
-<div class="panel">
-<p>Le site précédent, basé sur un ancien LMS, était devenu obsolète, graphiquement daté et techniquement vulnérable (piratage subi). Il ne permettait ni autonomie d’édition, ni mise en valeur des activités par secteur.</p>
-<p>L’ancien site d’Appartenances : <a href="https://web.archive.org/web/20181021205010/http://www.appartenances.ch/" target="_blank">https://web.archive.org/web/20181021205010/http://www.appartenances.ch/</a></p>
-<h4>PHASES DU DÉVELOPPEMENT</h4>
-<table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
-<thead>
-<tr style="background-color: #f6f9fc; text-align: left;">
-<th style="border: 1px solid #ddd; padding: 8px;">Phase</th>
-<th style="border: 1px solid #ddd; padding: 8px;">Année</th>
-<th style="border: 1px solid #ddd; padding: 8px;">Livrables principaux</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<a href="#" onclick="goToSlide(2); return false;">Phase 1</a>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">2020</td>
-<td style="border: 1px solid #ddd; padding: 8px;">Nouveau site (structure, design, CMS Joomla)</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<a href="#" onclick="goToSlide(4); return false;">Phase 2</a>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">2022</td>
-<td style="border: 1px solid #ddd; padding: 8px;">Refonte page d’accueil (UX, bloc secteurs, CTA)</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<a href="#" onclick="goToSlide(5); return false;">Phase 3</a>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">2025</td>
-<td style="border: 1px solid #ddd; padding: 8px;">Allègement du code, amélioration CMS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<button class="accordion">Objectifs</button>
-<div class="panel">
-<ul>
-<li>Renouveler l’image de l’institution</li>
-<li>Accorder une autonomie maximale au secteur de la communication pour la gestion du site</li>
-<li>Présenter les activités dans le respect des normes et standards EDUQUA</li>
-<li>Permettre aux secteurs de l’association de valoriser leurs prestations et approches respectives</li>
-<li>Offrir une navigation claire aux professionnels cherchant des prestations</li>
-<li>Centraliser l’identité graphique et éditoriale de l’association</li>
-<li>Refonte 2025 :
-                            <ul>
-<li>Harmoniser le graphisme du site</li>
-<li>Alléger le code du site pour permettre des interventions graphiques plus rapides</li>
-</ul>
-</li>
-</ul>
-</div>
-<button class="accordion">Mon rôle</button>
-<div class="panel">
-<ul style="list-style-type: disc;">
-<li>Établir le planning (<a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/Ebov-2D32zZMjNKK1HnmdMABYPL7Q5ADUKVqG6hcr1sGBg?e=Ir5YyU" target="_blank">phase 1</a>, phase 2, phase 3) et les échéances du projet</li>
-<li>Développer l’architecture et la taxonomie (<a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/EV2wUCfxBjRBiVc8FHvXFaABUjDMGNzQNZM6qY1HvJ_dBg?e=BUfiic" target="_blank">Phase 1</a>, Phase 3) du site</li>
-<li>Créer des <a href="https://appartenancesfcr.sharepoint.com/:f:/s/FCR/EjlWnRGBgClAgxxD70dxrKYB9lLE_U2YHFnGS7pXzc8smw?e=MAtX6N" target="_blank">wireframes et maquettes</a> (PowerPoint) (<a href="https://appartenancesfcr.sharepoint.com/:f:/s/FCR/EjlWnRGBgClAgxxD70dxrKYB9lLE_U2YHFnGS7pXzc8smw?e=MAtX6N" target="_blank">2020</a>, 2022, <a href="https://appartenancesfcr.sharepoint.com/:p:/s/FCR/EcgL2v2IjodKltuDPml5kRYBsy8TROz7jFbC8SyiZZqhOw?e=31e6VT" target="_blank">2025</a>)</li>
-<li>Coordonner les acteurs internes et externes : graphistes, développeurs, direction, équipes (<a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/EeX8YOfZJ1JHkF5jBvMyIKsBivOrrUKDJc76JOJXgIO8LA?e=JgoS5x" target="_blank">2025</a>)</li>
-<li>Superviser la création d’une <a href="https://adriencater.github.io/appartenances_design/" target="_blank">charte graphique/guide de production graphique</a></li>
-<li>Dans le cadre de la refonte du site, établir <a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/ESUHntkRCsNDv-nd4xkgQmABRQ80oVjw1CK04lyvc68SpA?e=IE67Ol" target="_blank">une typologie du site</a> pour identifier les attributs nécessaires au niveau du CMS/développement (<a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/ESUHntkRCsNDv-nd4xkgQmABRQ80oVjw1CK04lyvc68SpA?e=IE67Ol" target="_blank">2025</a>)</li>
-<li>Organiser la <a href="https://appartenancesfcr.sharepoint.com/:f:/s/FCR/EqvvJnx19JJLu5pMxz65FZIBX6lrPYfHWg75Ilk_576kmw?e=HqbPnn" target="_blank">prise de photos</a> et la révision des contenus</li>
-<li>Gérer la migration du site et du domaine sur un <a href="https://drive.google.com/file/d/188I6bpJjSKZ6oFfLIa3uqnELwrqPkY_s/view?usp=sharing" target="_blank">serveur infomaniak</a></li>
-<li>Gérer les coûts et le budget</li>
-<li>Coordonner la <a href="https://appartenancesfcr.sharepoint.com/:f:/s/FCR/EmtuOqjSmBFOlt--luupWRoBZjkiX1DVnxSWR_g_s8CWLg?e=Xloam7" target="_blank">rédaction du contenu et des textes</a></li>
-<li>Piloter la création <a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/ERDlQyPqlOZBvpz0ysrNz0UBmksdeMLH1eIMs4xizaNy5Q?e=R1G5IM" target="_blank">d’un guide d’utilisation Joomla</a> pour favoriser la prise en main des sites (y compris intranet) par mon secteur</li>
-<li>Recenser et communiquer avec le développeur pour résoudre des <a href="https://appartenancesfcr.sharepoint.com/:f:/s/FCR/EsLduhT_3tBPpsPsjAd1cz0Bwod-KxLrbh9Y7f1CSNXtxw?e=v9a4BF" target="_blank">problèmes techniques</a> du site</li>
-<li>Rechercher, rédiger et implémenter la <a href="https://www.appartenances.ch/mentions-legales" target="_blank">politique de confidentialité du site</a></li>
-<li>Développer les pages du site en utilisant un template intégré à Joomla</li>
-</ul>
-</div>
-<button class="accordion">Résultats</button>
-<div class="panel">
-<p>+12% de consultation des pages sectorielles, baisse des sollicitations internes, autonomie éditoriale renforcée.</p>
-</div>
-<button class="accordion">Exemples et explications</button>
-<div class="panel">
-<table style="width: 100%; border-collapse: collapse;">
-<tr>
-<!-- Colonne gauche : capture d'écran -->
-<td style="width: 50%; vertical-align: top; text-align: center;">
-<!-- Première image avec lien hypertexte -->
-<a href="https://www.appartenances.ch/activites/interpretariat-communautaire" target="_blank">
-<img alt="Capture d'écran 25_IC1" src="images/25_ic1.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-</a>
-<p style="margin-top: 10px; font-size: 14px; font-style: italic;">IC: Figure 1</p>
-<!-- Deuxième image avec lien hypertexte -->
-<a href="https://www.appartenances.ch/activites/interpretariat-communautaire/comment-travailler-avec-un-interprete" target="_blank">
-<img alt="Capture d'écran 25_IC_guide" src="images/25_ic_guide.jpg" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-</a>
-<p style="margin-top: 10px; font-size: 14px; font-style: italic;">IC: Figure 2</p>
-</td>
-<!-- Colonne droite : accordéons -->
-<td style="width: 50%; vertical-align: top;">
-<!-- OBJECTIFS DE LA PAGE -->
-<button class="accordion">OBJECTIFS DE LA PAGE</button>
-<div class="panel">
-<ul>
-<li>Offrir une réponse claire et rapide aux professionnel·les du réseau (santé, social, éducation…) souhaitant commander une prestation d’interprétariat communautaire.</li>
-<li>Faciliter la compréhension du rôle, du fonctionnement et des conditions d’intervention d’un·e interprète communautaire.</li>
-<li>Valoriser un service à but non lucratif face à la concurrence privée.</li>
-<li>Réduire les demandes incomplètes ou mal orientées, notamment en distinguant les profils professionnels et interprètes potentiels.</li>
-</ul>
-</div>
-<!-- DIFFICULTÉS INITIALES -->
-<button class="accordion">DIFFICULTÉS INITIALES</button>
-<div class="panel">
-<ul>
-<li>L’ancienne version de la page était trop sommaire : pas assez d’explications sur les étapes du processus de commande.</li>
-<li>De nombreuses demandes arrivaient par téléphone, souvent mal orientées.</li>
-<li>De nombreuses candidatures spontanées étaient inappropriées faute d’informations claires sur le métier et les critères de sélection.</li>
-</ul>
-</div>
-<!-- STRATÉGIE ADOPTÉE -->
-<button class="accordion">STRATÉGIE ADOPTÉE</button>
-<div class="panel">
-<ul>
-<li>Séparation explicite de deux parcours utilisateurs grâce à deux boutons d’entrée (figure 1) :
-                                            <ul>
-<li>Comment travailler avec un·e interprète ?</li>
-<li>Comment devenir interprète communautaire ?</li>
-</ul>
-</li>
-<li>Production de vidéos dans le cadre des 25 ans du service, afin d’humaniser la mission et valoriser la plus-value sociale du service.</li>
-<li>Ajout de guides à télécharger selon les domaines d’intervention.</li>
-</ul>
-</div>
-<!-- SOLUTION UX / DESIGN -->
-<button class="accordion">SOLUTION UX / DESIGN</button>
-<div class="panel">
-<ul>
-<li>Présentation latérale logique (figure 2) :
-                                            <ul>
-<li>Colonne gauche = éléments qualitatifs et pédagogiques</li>
-<li>Colonne droite = éléments pratiques (adresse, horaires, documents utiles, Google Maps)</li>
-</ul>
-</li>
-<li>Appels à l’action clairs, structurés par catégorie professionnelle.</li>
-<li>Utilisation d’une palette épurée, cohérente avec le reste du site.</li>
-</ul>
-</div>
-<!-- MON RÔLE -->
-<button class="accordion">MON RÔLE</button>
-<div class="panel">
-<ul>
-<li>Structuration de la page selon une logique taxonomique.</li>
-<li>Hiérarchisation de l’information selon les profils utilisateurs.</li>
-<li>Participation à la réflexion sur les parcours d’accès.</li>
-<li>Coordination avec l’équipe pour la production des vidéos.</li>
-<li>Clarification des documents téléchargeables et liens vers les guides.</li>
-</ul>
-</div>
-<!-- RÉSULTATS OBSERVÉS -->
-<button class="accordion">RÉSULTATS OBSERVÉS</button>
-<div class="panel">
-<ul>
-<li>Réduction significative des appels mal orientés à la réception.</li>
-<li>Hausse de l’utilisation des guides téléchargeables.</li>
-<li>Amélioration de la qualité des candidatures reçues.</li>
-<li>Accroissement général du recours au service, en lien aussi avec des facteurs contextuels, mais renforcé par une meilleure stratégie de communication.</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</article>
-<article>
-<h3>Projet 2 : Intranet</h3>
-<!-- Slider for Projet 2: Intranet -->
-<div class="slideshow-container" id="slider-intranet">
-<div class="slide fade">
-<img alt="Capture d'écran Intranet 1" onclick="openLightbox(this)" src="images/25_intra 1.jpg" style="width:100%"/>
-<div class="caption">Intranet - Page d'accueil</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran Intranet 2" onclick="openLightbox(this)" src="images/25_intra acc 2.jpg" style="width:100%"/>
-<div class="caption">Intranet - Page d'accueil 2</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran Modes d'emploi" onclick="openLightbox(this)" src="images/25_intra mde.jpg" style="width:100%"/>
-<div class="caption">Modes d'emploi</div>
-</div>
-<div class="slide fade">
-<img alt="Capture d'écran Annuaire" onclick="openLightbox(this)" src="images/25_intra_annuaire.jpg" style="width:100%"/>
-<div class="caption">Annuaire</div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="plusSlides(-1, 'slider-intranet')">❮</a>
-<a class="next" onclick="plusSlides(1, 'slider-intranet')">❯</a>
-</div>
-<br/>
-<!-- Points indicators -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1, 'slider-intranet')"></span>
-<span class="dot" onclick="currentSlide(2, 'slider-intranet')"></span>
-<span class="dot" onclick="currentSlide(3, 'slider-intranet')"></span>
-<span class="dot" onclick="currentSlide(4, 'slider-intranet')"></span>
-</div>
-<button class="accordion">OBJECTIFS GÉNÉRAUX</button>
-<div class="panel">
-<ul>
-<li>Centraliser tous les documents internes liés à la gouvernance, aux RH, aux processus qualité et aux procédures informatiques</li>
-<li>Servir d’outil d’onboarding pour les nouveaux collaborateurs</li>
-<li>Mettre à disposition un annuaire interne, un fil d’actualités et des ressources interactives</li>
-<li>Renforcer la transversalité entre les secteurs, la cohérence documentaire, l’autonomie des équipes, et la visibilité de l’information</li>
-<li>Offrir une version destinée aux interprètes communautaires à un stade ultérieur</li>
-</ul>
-</div>
-<button class="accordion">CONSTAT INITIAL</button>
-<div class="panel">
-<ul>
-<li>Absence de plateforme fonctionnelle (ancien intranet obsolète, non modifiable)</li>
-<li>Communication interne morcelée (principalement par email)</li>
-<li>Manque d’uniformité dans les pratiques documentaires et bureautiques</li>
-<li>Résistances fortes en interne face aux tentatives de centralisation</li>
-<li>Budget très limité (5000 CHF)</li>
-</ul>
-</div>
-<button class="accordion">STRATÉGIE ADOPTÉE</button>
-<div class="panel">
-<p><strong>Technique</strong></p>
-<ul>
-<li>Reprise de l’architecture du site web public (Joomla) pour mutualiser les compétences et minimiser les coûts</li>
-<li>Définition d’une architecture claire :
-                            <ul>
-<li>Page d’accueil avec raccourcis utiles, actualités, annuaire, journaux en ligne</li>
-<li>Menu latéral thématique avec rubriques sectorielles</li>
-</ul>
-</li>
-<li>Identification automatique via LDAP pour éviter la création manuelle de comptes utilisateurs</li>
-<li>Configuration des droits d’accès par rôle (documents, rubriques, sections spécifiques)</li>
-</ul>
-<p><strong>UX :</strong></p>
-<ul>
-<li>Mise à disposition de liens pratiques très demandés (système de pointage Tipee, annuaire, journaux) (voir slide 2)</li>
-<li>Affichage d’un fil d’actualités avec 4 catégories claires : Annonces aux collaborateurs, Événements/Formation, Communication de la direction, Bienvenue.</li>
-<li>Accès automatisé via un système LDAP connecté au serveur central pour éviter toute friction à la connexion.</li>
-</ul>
+        </p>
+    </header>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a L#intro>Accueil</a></li>
+            <li><a L#parcours>Parcours</a></li>
+            <li><a L#competences>Compétences</a></li>
+            <li><a L#projets>Projets</a></li>
+            <li><a L#contact>Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Bienvenue</h2>
+            <p>Bienvenue sur mon portfolio professionnel. Vous y trouverez une synthèse de mon parcours, mes compétences et mes projets dans le domaine de la formation digitale.</p>
+        </section>
+        <section id="parcours">
+            <h2>Mon parcours</h2>
+            <p>Plusieurs années d'expérience à l'intersection de la pédagogie, du numérique et de la gouvernance associative.</p>
+        </section>
+        <section id="competences">
+            <h2>Compétences</h2>
+            <ul>
+                <li>UX/UI appliqué à la pédagogie</li>
+                <li>Ingénierie de formation</li>
+                <li>Gestion de projet digital</li>
+                <li>Accompagnement au changement</li>
+            </ul>
+        </section>
+        <section id="projets">
+            <h2>Projets</h2>
 
-</div>
-<button class="accordion">UX / OUTILS</button>
-<div class="panel">
-<ul>
-<li>CMS : Joomla + plugin LDAP</li>
-<li>Outils de maquettage : PowerPoint</li>
-<li>Structuration de l’interface selon une logique constante :
+            <article>
+                <h3>Projet 1 : Refonte du site web</h3>
+                <!-- Slider for Projet 1: Refonte du site web -->
+                <div class="slideshow-container" id="slider-site-web">
+                    <div class="slide fade">
+                        <img Limages/2019_App_Website.jpg alt="Capture d'écran 2019" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Ancien site web 2011-2019</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/2020_App accueil.jpg alt="Capture d'écran 2020 accueil" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Site web 2020-2022</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/2020_App accueil 2.jpg alt="Capture d'écran 2020 accueil 2" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Site web 2020-2022</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/2025_App_Accueil.jpg alt="Capture d'écran 2025 accueil" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Site web 2022-2025</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/25_Prototype_Acc.jpg alt="Capture d'écran prototype 2025" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">(Prototype) Site web 2025</div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'slider-site-web')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-site-web')">&#10095;</a>
+                </div>
+                <br>
+                <!-- Points indicators -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, 'slider-site-web')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'slider-site-web')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'slider-site-web')"></span>
+                    <span class="dot" onclick="currentSlide(4, 'slider-site-web')"></span>
+                    <span class="dot" onclick="currentSlide(5, 'slider-site-web')"></span>
+                </div>
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                    <span class="close">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                </div>
+                <button class="accordion">Contexte</button>
+                <div class="panel">
+                    <p>Le site précédent, basé sur un ancien LMS, était devenu obsolète, graphiquement daté et techniquement vulnérable (piratage subi). Il ne permettait ni autonomie d’édition, ni mise en valeur des activités par secteur.</p>
+                    <p>L’ancien site d’Appartenances : <a Lhttps://web.archive.org/web/20181021205010/http://www.appartenances.ch/ target="_blank">https://web.archive.org/web/20181021205010/http://www.appartenances.ch/</a></p>
+                    <h4>PHASES DU DÉVELOPPEMENT</h4>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <thead>
+                            <tr style="background-color: #f6f9fc; text-align: left;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">Phase</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Année</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Livrables principaux</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">
+                                    <a L# onclick="goToSlide(2); return false;">Phase 1</a>
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2020</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Nouveau site (structure, design, CMS Joomla)</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">
+                                    <a L# onclick="goToSlide(4); return false;">Phase 2</a>
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2022</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Refonte page d’accueil (UX, bloc secteurs, CTA)</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">
+                                    <a L# onclick="goToSlide(5); return false;">Phase 3</a>
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2025</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Allègement du code, amélioration CMS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="accordion">Objectifs</button>
+                <div class="panel">
+                    <ul>
+                        <li>Renouveler l’image de l’institution</li>
+                        <li>Accorder une autonomie maximale au secteur de la communication pour la gestion du site</li>
+                        <li>Présenter les activités dans le respect des normes et standards EDUQUA</li>
+                        <li>Permettre aux secteurs de l’association de valoriser leurs prestations et approches respectives</li>
+                        <li>Offrir une navigation claire aux professionnels cherchant des prestations</li>
+                        <li>Centraliser l’identité graphique et éditoriale de l’association</li>
+                        <li>Refonte 2025 :
                             <ul>
-<li>Informations générales dans le body</li>
-<li>Ressources pratiques dans la colonne droite</li>
-</ul>
-</li>
-<li>Définition d’un style de navigation similaire au site web public pour faciliter l’appropriation</li>
-</ul>
-</div>
-<button class="accordion">MON RÔLE</button>
+                                <li>Harmoniser le graphisme du site</li>
+                                <li>Alléger le code du site pour permettre des interventions graphiques plus rapides</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="accordion">Mon rôle</button>
+                <div class="panel">
+                    <ul style="list-style-type: disc;">
+                        <li>Établir le planning (<a Lhttps://appartenancesfcr.sharepoint.com/:w:/s/FCR/Ebov-2D32zZMjNKK1HnmdMABYPL7Q5ADUKVqG6hcr1sGBg?e=Ir5YyU target="_blank">phase 1</a>, phase 2, phase 3) et les échéances du projet</li>
+                        <li>Développer l’architecture et la taxonomie (<a Lhttps://appartenancesfcr.sharepoint.com/:w:/s/FCR/EV2wUCfxBjRBiVc8FHvXFaABUjDMGNzQNZM6qY1HvJ_dBg?e=BUfiic target="_blank">Phase 1</a>, Phase 3) du site</li>
+                        <li>Créer des <a Lhttps://appartenancesfcr.sharepoint.com/:f:/s/FCR/EjlWnRGBgClAgxxD70dxrKYB9lLE_U2YHFnGS7pXzc8smw?e=MAtX6N target="_blank">wireframes et maquettes</a> (PowerPoint) (<a Lhttps://appartenancesfcr.sharepoint.com/:f:/s/FCR/EjlWnRGBgClAgxxD70dxrKYB9lLE_U2YHFnGS7pXzc8smw?e=MAtX6N target="_blank">2020</a>, 2022, <a Lhttps://appartenancesfcr.sharepoint.com/:p:/s/FCR/EcgL2v2IjodKltuDPml5kRYBsy8TROz7jFbC8SyiZZqhOw?e=31e6VT target="_blank">2025</a>)</li>
+                        <li>Coordonner les acteurs internes et externes : graphistes, développeurs, direction, équipes (<a Lhttps://appartenancesfcr.sharepoint.com/:w:/s/FCR/EeX8YOfZJ1JHkF5jBvMyIKsBivOrrUKDJc76JOJXgIO8LA?e=JgoS5x target="_blank">2025</a>)</li>
+                        <li>Superviser la création d’une <a Lhttps://adriencater.github.io/appartenances_design/ target="_blank">charte graphique/guide de production graphique</a></li>
+                        <li>Dans le cadre de la refonte du site, établir <a Lhttps://appartenancesfcr.sharepoint.com/:w:/s/FCR/ESUHntkRCsNDv-nd4xkgQmABRQ80oVjw1CK04lyvc68SpA?e=IE67Ol target="_blank">une typologie du site</a> pour identifier les attributs nécessaires au niveau du CMS/développement (<a Lhttps://appartenancesfcr.sharepoint.com/:w:/s/FCR/ESUHntkRCsNDv-nd4xkgQmABRQ80oVjw1CK04lyvc68SpA?e=IE67Ol target="_blank">2025</a>)</li>
+                        <li>Organiser la <a Lhttps://appartenancesfcr.sharepoint.com/:f:/s/FCR/EqvvJnx19JJLu5pMxz65FZIBX6lrPYfHWg75Ilk_576kmw?e=HqbPnn target="_blank">prise de photos</a> et la révision des contenus</li>
+                        <li>Gérer la migration du site et du domaine sur un <a Lhttps://drive.google.com/file/d/188I6bpJjSKZ6oFfLIa3uqnELwrqPkY_s/view?usp=sharing target="_blank">serveur infomaniak</a></li>
+                        <li>Gérer les coûts et le budget</li>
+                        <li>Coordonner la <a Lhttps://appartenancesfcr.sharepoint.com/:f:/s/FCR/EmtuOqjSmBFOlt--luupWRoBZjkiX1DVnxSWR_g_s8CWLg?e=Xloam7 target="_blank">rédaction du contenu et des textes</a></li>
+                        <li>Piloter la création <a Lhttps://appartenancesfcr.sharepoint.com/:w:/s/FCR/ERDlQyPqlOZBvpz0ysrNz0UBmksdeMLH1eIMs4xizaNy5Q?e=R1G5IM target="_blank">d’un guide d’utilisation Joomla</a> pour favoriser la prise en main des sites (y compris intranet) par mon secteur</li>
+                        <li>Recenser et communiquer avec le développeur pour résoudre des <a Lhttps://appartenancesfcr.sharepoint.com/:f:/s/FCR/EsLduhT_3tBPpsPsjAd1cz0Bwod-KxLrbh9Y7f1CSNXtxw?e=v9a4BF target="_blank">problèmes techniques</a> du site</li>
+                        <li>Rechercher, rédiger et implémenter la <a Lhttps://www.appartenances.ch/mentions-legales target="_blank">politique de confidentialité du site</a></li>
+                        <li>Développer les pages du site en utilisant un template intégré à Joomla</li>
+                    </ul>
+                </div>
+                <button class="accordion">Résultats</button>
+                <div class="panel">
+                    <p>+12% de consultation des pages sectorielles, baisse des sollicitations internes, autonomie éditoriale renforcée.</p>
+                </div>
+                <button class="accordion">Exemples et explications</button>
+                <div class="panel">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <!-- Colonne gauche : capture d'écran -->
+                            <td style="width: 50%; vertical-align: top; text-align: center;">
+                                <!-- Première image avec lien hypertexte -->
+                                <a Lhttps://www.appartenances.ch/activites/interpretariat-communautaire target="_blank">
+                                    <img Limages/25_IC1.jpg alt="Capture d'écran 25_IC1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                </a>
+                                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">IC: Figure 1</p>
+
+                                <!-- Deuxième image avec lien hypertexte -->
+                                <a Lhttps://www.appartenances.ch/activites/interpretariat-communautaire/comment-travailler-avec-un-interprete target="_blank">
+                                    <img Limages/25_IC_guide.jpg alt="Capture d'écran 25_IC_guide" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                </a>
+                                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">IC: Figure 2</p>
+                            </td>
+                            <!-- Colonne droite : accordéons -->
+                            <td style="width: 50%; vertical-align: top;">
+                                <!-- OBJECTIFS DE LA PAGE -->
+                                <button class="accordion">OBJECTIFS DE LA PAGE</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Offrir une réponse claire et rapide aux professionnel·les du réseau (santé, social, éducation…) souhaitant commander une prestation d’interprétariat communautaire.</li>
+                                        <li>Faciliter la compréhension du rôle, du fonctionnement et des conditions d’intervention d’un·e interprète communautaire.</li>
+                                        <li>Valoriser un service à but non lucratif face à la concurrence privée.</li>
+                                        <li>Réduire les demandes incomplètes ou mal orientées, notamment en distinguant les profils professionnels et interprètes potentiels.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- DIFFICULTÉS INITIALES -->
+                                <button class="accordion">DIFFICULTÉS INITIALES</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>L’ancienne version de la page était trop sommaire : pas assez d’explications sur les étapes du processus de commande.</li>
+                                        <li>De nombreuses demandes arrivaient par téléphone, souvent mal orientées.</li>
+                                        <li>De nombreuses candidatures spontanées étaient inappropriées faute d’informations claires sur le métier et les critères de sélection.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- STRATÉGIE ADOPTÉE -->
+                                <button class="accordion">STRATÉGIE ADOPTÉE</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Séparation explicite de deux parcours utilisateurs grâce à deux boutons d’entrée (figure 1) :
+                                            <ul>
+                                                <li>Comment travailler avec un·e interprète ?</li>
+                                                <li>Comment devenir interprète communautaire ?</li>
+                                            </ul>
+                                        </li>
+                                        <li>Production de vidéos dans le cadre des 25 ans du service, afin d’humaniser la mission et valoriser la plus-value sociale du service.</li>
+                                        <li>Ajout de guides à télécharger selon les domaines d’intervention.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- SOLUTION UX / DESIGN -->
+                                <button class="accordion">SOLUTION UX / DESIGN</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Présentation latérale logique (figure 2) :
+                                            <ul>
+                                                <li>Colonne gauche = éléments qualitatifs et pédagogiques</li>
+                                                <li>Colonne droite = éléments pratiques (adresse, horaires, documents utiles, Google Maps)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Appels à l’action clairs, structurés par catégorie professionnelle.</li>
+                                        <li>Utilisation d’une palette épurée, cohérente avec le reste du site.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- MON RÔLE -->
+                                <button class="accordion">MON RÔLE</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Structuration de la page selon une logique taxonomique.</li>
+                                        <li>Hiérarchisation de l’information selon les profils utilisateurs.</li>
+                                        <li>Participation à la réflexion sur les parcours d’accès.</li>
+                                        <li>Coordination avec l’équipe pour la production des vidéos.</li>
+                                        <li>Clarification des documents téléchargeables et liens vers les guides.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- RÉSULTATS OBSERVÉS -->
+                                <button class="accordion">RÉSULTATS OBSERVÉS</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Réduction significative des appels mal orientés à la réception.</li>
+                                        <li>Hausse de l’utilisation des guides téléchargeables.</li>
+                                        <li>Amélioration de la qualité des candidatures reçues.</li>
+                                        <li>Accroissement général du recours au service, en lien aussi avec des facteurs contextuels, mais renforcé par une meilleure stratégie de communication.</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+
+            <article>
+                <h3>Projet 2 : Intranet</h3>
+                <!-- Slider for Projet 2: Intranet -->
+                <div class="slideshow-container" id="slider-intranet">
+                    <div class="slide fade">
+                        <img Limages/25_Intra 1.jpg alt="Capture d'écran Intranet 1" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Intranet - Page d'accueil</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/25_Intra acc 2.jpg alt="Capture d'écran Intranet 2" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Intranet - Page d'accueil 2</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/25_Intra MDE.jpg alt="Capture d'écran Modes d'emploi" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Modes d'emploi</div>
+                    </div>
+                    <div class="slide fade">
+                        <img Limages/25_Intra_Annuaire.jpg alt="Capture d'écran Annuaire" style="width:100%" onclick="openLightbox(this)">
+                        <div class="caption">Annuaire</div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'slider-intranet')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-intranet')">&#10095;</a>
+                </div>
+                <br>
+                <!-- Points indicators -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, 'slider-intranet')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'slider-intranet')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'slider-intranet')"></span>
+                    <span class="dot" onclick="currentSlide(4, 'slider-intranet')"></span>
+                </div>
+                <button class="accordion">OBJECTIFS GÉNÉRAUX</button>
+                <div class="panel">
+                    <ul>
+                        <li>Centraliser tous les documents internes liés à la gouvernance, aux RH, aux processus qualité et aux procédures informatiques</li>
+                        <li>Servir d’outil d’onboarding pour les nouveaux collaborateurs</li>
+                        <li>Mettre à disposition un annuaire interne, un fil d’actualités et des ressources interactives</li>
+                        <li>Renforcer la transversalité entre les secteurs, la cohérence documentaire, l’autonomie des équipes, et la visibilité de l’information</li>
+                        <li>Offrir une version destinée aux interprètes communautaires à un stade ultérieur</li>
+                    </ul>
+                </div>
+                <button class="accordion">CONSTAT INITIAL</button>
+                <div class="panel">
+                    <ul>
+                        <li>Absence de plateforme fonctionnelle (ancien intranet obsolète, non modifiable)</li>
+                        <li>Communication interne morcelée (principalement par email)</li>
+                        <li>Manque d’uniformité dans les pratiques documentaires et bureautiques</li>
+                        <li>Résistances fortes en interne face aux tentatives de centralisation</li>
+                        <li>Budget très limité (5000 CHF)</li>
+                    </ul>
+                </div>
+                <button class="accordion">STRATÉGIE ADOPTÉE</button>
+                <div class="panel">
+                    <p><strong>Technique</strong></p>
+                    <ul>
+                        <li>Reprise de l’architecture du site web public (Joomla) pour mutualiser les compétences et minimiser les coûts</li>
+                        <li>Définition d’une architecture claire :
+                            <ul>
+                                <li>Page d’accueil avec raccourcis utiles, actualités, annuaire, journaux en ligne</li>
+                                <li>Menu latéral thématique avec rubriques sectorielles</li>
+                            </ul>
+                        </li>
+                        <li>Identification automatique via LDAP pour éviter la création manuelle de comptes utilisateurs</li>
+                        <li>Configuration des droits d’accès par rôle (documents, rubriques, sections spécifiques)</li>
+                    </ul>
+                    <p><strong>UX :</strong></p>
+                    <ul>
+                        <li>Mise à disposition de liens pratiques très demandés (système de pointage Tipee, annuaire, journaux) (voir slide 2)</li>
+                        <li>Affichage d’un fil d’actualités avec 4 catégories claires : Annonces aux collaborateurs, Événements/Formation, Communication de la direction, Bienvenue.</li>
+                        <li>Accès automatisé via un système LDAP connecté au serveur central pour éviter toute friction à la connexion.</li>
+                    </ul>
+                    </ul>
+                </div>
+                <button class="accordion">UX / OUTILS</button>
+                <div class="panel">
+                    <ul>
+                        <li>CMS : Joomla + plugin LDAP</li>
+                        <li>Outils de maquettage : PowerPoint</li>
+                        <li>Structuration de l’interface selon une logique constante :
+                            <ul>
+                                <li>Informations générales dans le body</li>
+                                <li>Ressources pratiques dans la colonne droite</li>
+                            </ul>
+                        </li>
+                        <li>Définition d’un style de navigation similaire au site web public pour faciliter l’appropriation</li>
+                    </ul>
+                </div>
+                <button class="accordion">MON RÔLE</button>
+                <div class="panel">
+                    <ul>
+                        <li>Conception UX complète et co-conception de l’arborescence de la documentation</li>
+                        <li>Coordination projet : prestataires externes, équipes internes, direction</li>
+                        <li>Conception de la stratégie pour élaborer les fonctionnalités de l’intranet</li>
+                        <li>Gestion technique : administration Joomla, configuration des accès, gestion des fichiers</li>
+                        <li>Création et rationalisation de documents internes</li>
+                        <li>Conception du guide utilisateur et du guide de production graphique</li>
+                    </ul>
+                </div>
+                <button class="accordion">RESULTAS</button>
+                <div class="panel">
+                    <ul>
+                        <li>Malgré un accueil initial très réservé, l’intranet compte aujourd’hui 200 connexions mensuelles sur 300 collaborateurs</li>
+                        <li>La réception observe une baisse notable des sollicitations téléphoniques ou par email</li>
+                        <li>L’intranet a facilité l’appropriation de documents qualité (EDUQUA) et procédures internes</li>
+                        <li>Prévue de migration dans le cadre de la refonte du site web avec la même logique UX/technique</li>
+                        <li>200 connexions par mois en 2025 (sur environ 300 collaborateurs), avec un taux de progression constant depuis 2021</li>
+                        <li>Adoption significative des pratiques numériques : diminution des sollicitations email, meilleure autonomie des équipes dans la recherche de documents et procédures</li>
+                        <li>L’outil est aujourd’hui reconnu comme levier de gouvernance au sein de l’association</li>
+                    </ul>
+                </div>
+                <button class="accordion">Exemples et explications</button>
 <div class="panel">
-<ul>
-<li>Conception UX complète et co-conception de l’arborescence de la documentation</li>
-<li>Coordination projet : prestataires externes, équipes internes, direction</li>
-<li>Conception de la stratégie pour élaborer les fonctionnalités de l’intranet</li>
-<li>Gestion technique : administration Joomla, configuration des accès, gestion des fichiers</li>
-<li>Création et rationalisation de documents internes</li>
-<li>Conception du guide utilisateur et du guide de production graphique</li>
-</ul>
+    <!-- Premier tableau -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+            <!-- Colonne gauche : captures d'écran -->
+            <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
+                <a Lhttps://www.example.com target="_blank">
+                    <img LImages/25_Intra MDE.jpg alt="Capture d'écran 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 1 : Description de l'image</p>
+            </td>
+            <!-- Colonne droite : explications -->
+            <td style="width: 50%; vertical-align: top; padding: 10px;">
+                <ul>
+                    <li>Explication 1 pour le premier tableau</li>
+                    <li>Explication 2 pour le premier tableau</li>
+                    <li>Explication 3 pour le premier tableau</li>
+                    <li>Explication 4 pour le premier tableau</li>
+                    <li>Explication 5 pour le premier tableau</li>
+                    <li>Explication 6 pour le premier tableau</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Deuxième tableau -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+            <!-- Colonne gauche : captures d'écran -->
+            <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
+                <a Lhttps://www.example.com target="_blank">
+                    <img Ldocuments/Gifs/signature-email-outlook.gif alt="Capture d'écran 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 2 : Description de l'image</p>
+            </td>
+            <!-- Colonne droite : explications -->
+            <td style="width: 50%; vertical-align: top; padding: 10px;">
+                <ul>
+                    <li>Explication 1 pour le deuxième tableau</li>
+                    <li>Explication 2 pour le deuxième tableau</li>
+                    <li>Explication 3 pour le deuxième tableau</li>
+                    <li>Explication 4 pour le deuxième tableau</li>
+                    <li>Explication 5 pour le deuxième tableau</li>
+                    <li>Explication 6 pour le deuxième tableau</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Troisième tableau -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+            <!-- Colonne gauche : captures d'écran -->
+            <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
+                <a Lhttps://www.example.com target="_blank">
+                    <img LImages/25_Intra_MDE2.jpg alt="Capture d'écran 3" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 3 : Description de l'image</p>
+            </td>
+            <!-- Colonne droite : explications -->
+            <td style="width: 50%; vertical-align: top; padding: 10px;">
+                <ul>
+                    <li>Explication 1 pour le troisième tableau</li>
+                    <li>Explication 2 pour le troisième tableau</li>
+                    <li>Explication 3 pour le troisième tableau</li>
+                    <li>Explication 4 pour le troisième tableau</li>
+                    <li>Explication 5 pour le troisième tableau</li>
+                    <li>Explication 6 pour le troisième tableau</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Quatrième tableau -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+            <!-- Colonne gauche : captures d'écran -->
+            <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
+                <a Lhttps://www.example.com target="_blank">
+                    <img LImages/25_Intra_Annuaire.jpg alt="Capture d'écran 4" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 4 : Description de l'image</p>
+            </td>
+            <!-- Colonne droite : explications -->
+            <td style="width: 50%; vertical-align: top; padding: 10px;">
+                <ul>
+                    <li>Explication 1 pour le quatrième tableau</li>
+                    <li>Explication 2 pour le quatrième tableau</li>
+                    <li>Explication 3 pour le quatrième tableau</li>
+                    <li>Explication 4 pour le quatrième tableau</li>
+                    <li>Explication 5 pour le quatrième tableau</li>
+                    <li>Explication 6 pour le quatrième tableau</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </div>
-<button class="accordion">RESULTAS</button>
-<div class="panel">
-<ul>
-<li>Malgré un accueil initial très réservé, l’intranet compte aujourd’hui 200 connexions mensuelles sur 300 collaborateurs</li>
-<li>La réception observe une baisse notable des sollicitations téléphoniques ou par email</li>
-<li>L’intranet a facilité l’appropriation de documents qualité (EDUQUA) et procédures internes</li>
-<li>Prévue de migration dans le cadre de la refonte du site web avec la même logique UX/technique</li>
-<li>200 connexions par mois en 2025 (sur environ 300 collaborateurs), avec un taux de progression constant depuis 2021</li>
-<li>Adoption significative des pratiques numériques : diminution des sollicitations email, meilleure autonomie des équipes dans la recherche de documents et procédures</li>
-<li>L’outil est aujourd’hui reconnu comme levier de gouvernance au sein de l’association</li>
-</ul>
-</div>
-<button class="accordion">Exemples et explications</button>
-<div class="panel">
-<!-- Premier tableau -->
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-<tr>
-<!-- Colonne gauche : captures d'écran -->
-<td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-<a href="https://www.example.com" target="_blank">
-<img alt="Capture d'écran 1" src="images/25_intra mde.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-</a>
-<p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 1 : Description de l'image</p>
-</td>
-<!-- Colonne droite : explications -->
-<td style="width: 50%; vertical-align: top; padding: 10px;">
-<ul>
-<li>Explication 1 pour le premier tableau</li>
-<li>Explication 2 pour le premier tableau</li>
-<li>Explication 3 pour le premier tableau</li>
-<li>Explication 4 pour le premier tableau</li>
-<li>Explication 5 pour le premier tableau</li>
-<li>Explication 6 pour le premier tableau</li>
-</ul>
-</td>
-</tr>
-</table>
-<!-- Deuxième tableau -->
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-<tr>
-<!-- Colonne gauche : captures d'écran -->
-<td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-<a href="https://www.example.com" target="_blank">
-<img alt="Capture d'écran 2" src="documents/gifs/signature-email-outlook.gif" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-</a>
-<p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 2 : Description de l'image</p>
-</td>
-<!-- Colonne droite : explications -->
-<td style="width: 50%; vertical-align: top; padding: 10px;">
-<ul>
-<li>Explication 1 pour le deuxième tableau</li>
-<li>Explication 2 pour le deuxième tableau</li>
-<li>Explication 3 pour le deuxième tableau</li>
-<li>Explication 4 pour le deuxième tableau</li>
-<li>Explication 5 pour le deuxième tableau</li>
-<li>Explication 6 pour le deuxième tableau</li>
-</ul>
-</td>
-</tr>
-</table>
-<!-- Troisième tableau -->
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-<tr>
-<!-- Colonne gauche : captures d'écran -->
-<td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-<a href="https://www.example.com" target="_blank">
-<img alt="Capture d'écran 3" src="images/25_intra_mde2.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-</a>
-<p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 3 : Description de l'image</p>
-</td>
-<!-- Colonne droite : explications -->
-<td style="width: 50%; vertical-align: top; padding: 10px;">
-<ul>
-<li>Explication 1 pour le troisième tableau</li>
-<li>Explication 2 pour le troisième tableau</li>
-<li>Explication 3 pour le troisième tableau</li>
-<li>Explication 4 pour le troisième tableau</li>
-<li>Explication 5 pour le troisième tableau</li>
-<li>Explication 6 pour le troisième tableau</li>
-</ul>
-</td>
-</tr>
-</table>
-<!-- Quatrième tableau -->
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-<tr>
-<!-- Colonne gauche : captures d'écran -->
-<td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-<a href="https://www.example.com" target="_blank">
-<img alt="Capture d'écran 4" src="images/25_intra_annuaire.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-</a>
-<p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 4 : Description de l'image</p>
-</td>
-<!-- Colonne droite : explications -->
-<td style="width: 50%; vertical-align: top; padding: 10px;">
-<ul>
-<li>Explication 1 pour le quatrième tableau</li>
-<li>Explication 2 pour le quatrième tableau</li>
-<li>Explication 3 pour le quatrième tableau</li>
-<li>Explication 4 pour le quatrième tableau</li>
-<li>Explication 5 pour le quatrième tableau</li>
-<li>Explication 6 pour le quatrième tableau</li>
-</ul>
-</td>
-</tr>
-</table>
-</div>
-</article>
-<article>
-<h3>Projet 3 : Digitalisation de la formation</h3>
-<button class="accordion">Contexte</button>
-<div class="panel">
-<p>Réponse à la crise sanitaire et accélération numérique EDUQUA. Mise en place d’une infrastructure complète pour la formation hybride.</p>
-</div>
-<button class="accordion">Objectifs</button>
-<div class="panel">
-<p>Visio, tablettes, LMS Moodle, gestion MDM, outils interactifs, guides utilisateurs, accompagnement individuel.</p>
-</div>
-<button class="accordion">Mon rôle</button>
-<div class="panel">
-<p>Coordinateur, technicien, formateur. Création de contenus, guides, supports d’appropriation pour tous les publics.</p>
-</div>
-<button class="accordion">Résultats</button>
-<div class="panel">
-<p>Autonomisation des secteurs, baisse des sollicitations, continuité pédagogique assurée pendant et après la pandémie.</p>
-</div>
-</article>
-<section id="contact">
-<h2>Contact</h2>
-<p>Email : damian@example.com</p>
-</section>
-</section></main>
-<footer>
-<p>© Damian Laird 2025</p>
-</footer>
-<script src="config.js"></script>
-<script src="script.js"></script>
-<script src="chatbot.js" type="module"></script>
-<!-- Bulle de chat flottante -->
-<div id="chat-button" onclick="toggleChat()">
+            </article>
+
+            <article>
+                <h3>Projet 3 : Digitalisation de la formation</h3>
+                <button class="accordion">Contexte</button>
+                <div class="panel">
+                    <p>Réponse à la crise sanitaire et accélération numérique EDUQUA. Mise en place d’une infrastructure complète pour la formation hybride.</p>
+                </div>
+                <button class="accordion">Objectifs</button>
+                <div class="panel">
+                    <p>Visio, tablettes, LMS Moodle, gestion MDM, outils interactifs, guides utilisateurs, accompagnement individuel.</p>
+                </div>
+                <button class="accordion">Mon rôle</button>
+                <div class="panel">
+                    <p>Coordinateur, technicien, formateur. Création de contenus, guides, supports d’appropriation pour tous les publics.</p>
+                </div>
+                <button class="accordion">Résultats</button>
+                <div class="panel">
+                    <p>Autonomisation des secteurs, baisse des sollicitations, continuité pédagogique assurée pendant et après la pandémie.</p>
+                </div>
+            </article>
+
+           
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email : damian@example.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>© Damian Laird 2025</p>
+    </footer>
+    <script Lconfig.js></script>
+    <script Lscript.js></script>
+    <script type="module" Lchatbot.js></script>
+    
+    <!-- Bulle de chat flottante -->
+    <div id="chat-button" onclick="toggleChat()">
       💬
     </div>
-<!-- Fenêtre de chat -->
-<div id="chat-window" style="display: none;">
-<div class="chat-header">
-<span>Assistant Portfolio</span>
-<button onclick="toggleChat()">✕</button>
-</div>
-<div id="chat-messages"></div>
+
+    <!-- Fenêtre de chat -->
+    <div id="chat-window" style="display: none;">
+      <div class="chat-header">
+        <span>Assistant Portfolio</span>
+        <button onclick="toggleChat()">✕</button>
+      </div>
+      <div id="chat-messages"></div>
 <div id="chat-input">
-<input id="user-input" placeholder="Posez votre question..." type="text"/>
-<button onclick="sendMessage()">Envoyer</button>
+  <input type="text" id="user-input" placeholder="Posez votre question...">
+  <button onclick="sendMessage()">Envoyer</button>
 </div>
-</div>
+    </div>
 </body>
 </html>
