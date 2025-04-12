@@ -8,20 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Damian Laird – Portfolio Digital</h1>
-        <p>
-            <a href="documents/CV_Damian Laird_IMAD_2025FINAL.pdf" target="_blank">
-                <i class="fas fa-file-pdf"></i> Télécharger mon CV
-            </a>
-        </p>
-    </header>
-    <nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Damian Laird</h1>
+                <p class="subtitle">Portfolio Digital – Formation et Projets</p>
+                <p>
+                    <a href="documents/CV_Damian Laird_IMAD_2025FINAL.pdf" target="_blank" class="download-cv">
+                        <i class="fas fa-file-pdf"></i> Télécharger mon CV
+                    </a>
+                </p>
+            </div>
+            <div class="header-image">
+                <!-- Placeholder SVG icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="#1F4F82">
+                    <path d="M12 0l3.09 6.26L22 7.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 12.14 2 7.27l6.91-1.01L12 0z"/>
+                </svg>
+            </div>
         </div>
+    </header>
+    <nav class="menu">
         <ul>
             <li><a href="#intro">Accueil</a></li>
             <li><a href="#parcours">Parcours</a></li>
@@ -487,19 +493,19 @@
                 <!-- Slideshow for Projet 3: Digitalisation de la formation -->
                 <div class="slideshow-container" id="slider-digitalisation">
                     <div class="slide fade">
-                        <img src="images/digitalisation_slide1.jpg" alt="Slide 1 - Digitalisation" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_padlet.jpg" alt="Slide 1 - Digitalisation" style="width:100%" onclick="openLightbox(this)">
                         <div class="caption">Slide 1 - Présentation générale</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/digitalisation_slide2.jpg" alt="Slide 2 - Formation" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_moodle.jpg" alt="Slide 2 - Formation" style="width:100%" onclick="openLightbox(this)">
                         <div class="caption">Slide 2 - Formation</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/digitalisation_slide3.jpg" alt="Slide 3 - Matériel" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_zoom.jpg" alt="Slide 3 - Matériel" style="width:100%" onclick="openLightbox(this)">
                         <div class="caption">Slide 3 - Matériel</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/digitalisation_slide4.jpg" alt="Slide 4 - Résultats" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_intra_mde_video_explicative.jpg" alt="Slide 4 - Résultats" style="width:100%" onclick="openLightbox(this)">
                         <div class="caption">Slide 4 - Résultats</div>
                     </div>
                     <!-- Navigation buttons -->
@@ -515,71 +521,137 @@
                     <span class="dot" onclick="currentSlide(4, 'slider-digitalisation')"></span>
                 </div>
 
-                <button class="accordion">🎯 Coordinateur</button>
-                <div class="panel">
-                    <p>
-                        Afin de répondre aux défis posés par la crise sanitaire, j’ai été nommé responsable du projet de digitalisation de la formation, en lien direct avec la direction. J’ai mis en place un groupe de travail réunissant les responsables de secteur (interprétariat communautaire, espaces femmes, espaces hommes, administration), la direction, la référente qualité et mon secteur. Ensemble, nous avons recensé les besoins pédagogiques et technologiques 📄 <a href="#">lien vers le document de cadrage</a>.
-                    </p>
-                    <p>
-                        Le budget global s’élevait à CHF 70’000, dont une partie provenait de la Loterie Romande. L’essentiel était dédié à l’acquisition de matériel informatique, les logiciels étant limités par contrainte budgétaire. En tant que garant du budget, j’ai assuré le suivi financier 📊 <a href="#">document budgétaire</a> et canalisé les initiatives concurrentes en imposant une vision unifiée et pragmatique.
-                    </p>
-                    <p>
-                        Le planning général du projet a été formalisé 🗓 <a href="#">lien planning</a>. Plusieurs imprévus techniques ont surgi, notamment la gestion de plus de 70 tablettes. J’ai alors proposé d’intégrer un système de Mobile Device Management (MDM) via Miradore, configuré par un expert externe, évitant CHF 5’000 de frais d’installation.
-                    </p>
-                    <p>
-                        Côté LMS, après une prospection détaillée 📄 <a href="#">comparatif LMS</a>, j’ai opté pour Moodle auto-hébergé via Infomaniak, garantissant autonomie et économie. J’ai ensuite supervisé la configuration de versions sectorielles du LMS, aujourd’hui utilisées en production.
-                    </p>
-                </div>
-
-                <button class="accordion">👩‍🏫 Formateur</button>
-                <div class="panel">
-                    <p>J’ai accompagné deux profils cibles :</p>
-                    <ul>
-                        <li>Les collaborateurs et formatrices internes à Appartenances</li>
-                        <li>Les participant·es aux formations des Espaces sociaux</li>
-                    </ul>
-                    <p>
-                        La majorité des publics formés avait un niveau faible de littératie numérique, avec parfois une forte résistance au changement. J’ai misé sur une approche mixte : création de ressources accessibles, mobilisation de personnes relais, et ateliers ciblés.
-                    </p>
-                    <p>Pour les formations à distance, ma stratégie consistait à :</p>
-                    <ul>
-                        <li>Préparer les participant·es (envoi de fiches techniques avant les sessions)</li>
-                        <li>Créer des sous-groupes Zoom préconfigurés pour faciliter la dynamique</li>
-                        <li>Utiliser des supports interactifs (Padlet, Google Docs) pour la co-construction</li>
-                        <li>Restituer collectivement les résultats en plénière</li>
-                    </ul>
-                    <p>📌 Exemples de Padlet utilisés :</p>
-                    <ul>
-                        <li><a href="#">Padlet 1 – Approches transculturelles</a></li>
-                        <li><a href="#">Padlet 2 – Formation ARPIH</a></li>
-                    </ul>
-                </div>
-
-                <button class="accordion">🛠 Technicien</button>
-                <div class="panel">
-                    <p>
-                        J’ai effectué une prospection complète des solutions techniques (LMS et MDM), comparé les coûts, les modèles d’hébergement et les conditions d’autonomie. Ma connaissance des CMS m’a permis de configurer Moodle de manière souple et efficace.
-                    </p>
-                    <p>
-                        Côté MDM, Miradore s’est révélé complexe à prendre en main, mais j’ai pu l’installer, créer les profils, enregistrer les appareils et configurer les règles de sécurité sans prestataire externe, avec l’aide ponctuelle d’un technicien de confiance. J’ai rédigé l’ensemble des procédures de configuration pour garantir la pérennité du dispositif.
-                    </p>
-                </div>
-
-                <button class="accordion">📚 Créateur de contenu</button>
-                <div class="panel">
-                    <p>Pour soutenir l’adoption, j’ai produit des ressources pédagogiques sous plusieurs formats :</p>
-                    <ul>
-                        <li>📊 Slideshows et fiches explicatives créées sur PowerPoint</li>
-                        <li>📄 PDF téléchargeables ou imprimables</li>
-                        <li>🎞 Vidéos d’utilisation (Zoom, tablette, plateforme Moodle)</li>
-                        <li>🌀 GIFs animés intégrés à l’intranet (Joomla)</li>
-                    </ul>
-                    <p>
-                        Ces ressources ont été publiées dans une section dédiée de l’intranet. Elles sont encore utilisées aujourd’hui, preuve de leur utilité durable et de l’appropriation réussie par les équipes.
-                    </p>
-                </div>
-            </article>
-
+                <!-- Accordéon principal -->
+                <article>
+                    <button class="accordion">Contexte</button>
+                    <div class="panel">
+                        <ul>
+                            <li>Projet lancé en 2020 en réponse à la crise sanitaire (COVID-19), afin d'assurer la continuité des formations malgré les restrictions de présentiel.</li>
+                            <li>Initiative stratégique visant à :
+                                <ul>
+                                    <li>Renforcer la résilience numérique de l'association.</li>
+                                    <li>Répondre aux exigences de la certification EDUQUA concernant le numérique.</li>
+                                    <li>Séduire les fondations en valorisant l’impact pédagogique et l’inclusion numérique.</li>
+                                </ul>
+                            </li>
+                            <li>Portage institutionnel : projet mené en lien direct avec la direction, avec implication des responsables de secteur, de la référente qualité et de l’équipe communication.</li>
+                        </ul>
+                    </div>
+                
+                    <button class="accordion">Objectifs</button>
+                    <div class="panel">
+                        <h4>🏛 Objectifs institutionnels</h4>
+                        <ul>
+                            <li><strong>Assurer</strong> la continuité des services de formation durant la crise sanitaire (COVID-19).</li>
+                            <li><strong>Accompagner</strong> le passage d’une phase de professionnalisation à une phase de consolidation au sein de l’institution.</li>
+                            <li><strong>Moderniser</strong> l’image de l’association en valorisant son dynamisme et son professionnalisme.</li>
+                            <li><strong>Utiliser</strong> la digitalisation de la formation comme levier de communication externe et d’attractivité auprès des financeurs.</li>
+                            <li><strong>Répondre</strong> aux nouveaux critères de subvention liés à la transformation numérique et à la littéracie digitale.</li>
+                            <li><strong>Se conformer</strong> aux exigences EDUQUA en matière d’intégration du numérique dans les dispositifs de formation.</li>
+                            <li><strong>Structurer</strong> une politique de formation transversale, en harmonisant les pratiques entre secteurs et en mutualisant les ressources.</li>
+                        </ul>
+                
+                        <h4>🎓 Objectifs pédagogiques</h4>
+                        <ul>
+                            <li><strong>Renforcer</strong> la participation aux formations certifiantes, notamment dans l’interprétariat communautaire, en introduisant plus de flexibilité.</li>
+                            <li><strong>Faciliter</strong> l’accès à de nouveaux supports pédagogiques (capsules vidéo, tutoriels, quiz, documents numériques).</li>
+                            <li><strong>Encourager</strong> l’autoformation et le travail individualisé des participant·es, en leur permettant de progresser à leur rythme.</li>
+                            <li><strong>Allier</strong> différents supports didactiques (visuel, écrit, audio) pour dynamiser les apprentissages et varier les approches sensorielles.</li>
+                            <li><strong>Appuyer</strong> les formateurs·trices dans l’animation collective, grâce à des outils de projection facilitant les consignes et les supports visuels.</li>
+                            <li><strong>Développer</strong> des formats de classe inversée et d’enseignement à distance, pour renforcer l’autonomie des participant·es et favoriser les exercices pratiques en présentiel.</li>
+                            <li><strong>Permettre</strong> un suivi continu des apprentissages via des supports digitaux, en adaptant l’accompagnement pédagogique aux progrès individuels.</li>
+                        </ul>
+                
+                        <h4>🛠 Objectifs techniques</h4>
+                        <ul>
+                            <li><strong>Installer</strong> une infrastructure technique permettant une transition rapide vers des formats hybrides (visioconférence, outils interactifs, tablettes).</li>
+                            <li><strong>Favoriser</strong> une autonomie maximale dans la gestion et la maintenance des outils, afin d’éviter les dépendances à des prestataires externes.</li>
+                            <li><strong>Mettre en place</strong> une plateforme centralisée de diffusion des ressources numériques, via Moodle et/ou l’intranet interne.</li>
+                            <li><strong>Sécuriser</strong> l’ensemble du matériel informatique grâce à un système de gestion de flotte mobile (MDM) – <a href="https://www.miradore.com/" target="_blank">Miradore</a>.</li>
+                        </ul>
+                    </div>
+                
+                    <button class="accordion">Mon rôle</button>
+                    <div class="panel">
+                        
+                        <h4>🎯 Coordinateur</h4>
+                        <ul>
+                            <li><strong>Coordoner</strong> l'ensemble du projet de digitalisation, en assurant l’interface avec la direction, les secteurs et la référente qualité.</li>
+                            <li><strong>Participer</strong> à un groupe de travail intersectoriel intégrant l’administration, les Espaces femmes et hommes, l’interprétariat communautaire et la formation. 
+                            </li>
+                            <li><strong>Recueillir</strong> les besoins pédagogiques, techniques et organisationnels via des échanges documentés 📄 
+                                <a href="https://appartenancesfcr.sharepoint.com/:w:/s/FCR/EYEJpz0bwVJOnrdkD1Xy5JsBniLVo0tVY1scI_NHm7szkA?e=LiidYU" target="_blank">document de cadrage</a>.
+                            </li>
+                            <li><strong>Gérer</strong> un budget de CHF 70’000 en tenant compte des contraintes de chaque secteur 📊 
+                                <a href="https://appartenancesfcr.sharepoint.com/:x:/s/FCR/EUFpGOpNVmlEmlmOSE16s54BsSd9WW6N5Q9hxcEqnwcYAQ?e=S6zG0v" target="_blank">budget</a>.
+                            </li>
+                            <li><strong>Coordonner</strong> les parties prenantes et arbitrer les priorités lorsque des canaux parallèles menaçaient la cohérence du projet.
+                            <a href="https://appartenancesfcr.sharepoint.com/:x:/s/FCR/EW4p_oHkiylKimII3Nmk7voB7DBYqxfwpv_l2t8pZEllZA?e=YkxT8O" target="_blank">
+                                Planning et budget du projet </a>
+                        </li>
+                            <li><strong>Établir</strong> un planning détaillé et suivre son exécution 🗓 
+                                <a href="https://appartenancesfcr.sharepoint.com/:x:/s/FCR/EW4p_oHkiylKimII3Nmk7voB7DBYqxfwpv_l2t8pZEllZA?e=YkxT8O" target="_blank">planning</a>.
+                            </li>
+                            <li><strong>Garantir</strong> la cohérence globale du projet avec les autres chantiers numériques (site web, intranet, outils partagés).</li>
+                            <li><strong>Piloter</strong> le projet de recherches de fonds, de la rédaction du dossier à l'envoi auprès de fondations.
+                                <a href="https://appartenancesfcr.sharepoint.com/:b:/s/FCR/ERdrelU_BeFKpsfO9h6uEXoBi2V7ZTiR90GGo6I1F2T3Cg?e=hmcuFz" target="_blank">
+                                    Dossier de recherche de fonds
+                                </a>
+                                <li><strong>Evaluer et négocier</strong> les outils et solutions techniques
+                                <a href="https://appartenancesfcr.sharepoint.com/:x:/s/FCR/Eepr3zNkkulMjbsatHHAj3sBVuy0x4rFsDKSxvwbymx_ww?e=DVhcLY" target="_blank">
+                                    Prospection de LMS
+                                </a>
+                            </li>
+                        </ul>
+                    
+                        <h4>👩‍🏫 Formateur</h4>
+                        <ul>
+                            <li><strong>Accompagner</strong> les formateurs internes dans l’adoption des outils (Zoom, tablettes, LMS, outils collaboratifs).</li>
+                            <li><strong>Sensibiliser</strong> les participants à la préparation technique en amont (checklists, tests de connexion).</li>
+                            <li><strong>Organiser</strong> des formations dynamiques à distance en misant sur :
+                                <ul>
+                                    <li>La répartition en sous-groupes Zoom</li>
+                                    <li>Des documents collaboratifs pour la co-construction</li>
+                                    <li>Des restitutions en plénière</li>
+                                </ul>
+                            </li>
+                            <li><strong>Concevoir</strong> des formats pédagogiques adaptés à des publics à faible littératie numérique.</li>
+                            <li><strong>Mettre en œuvre</strong> une stratégie de relais internes pour diffuser les compétences numériques de manière organique.</li>
+                        </ul>
+                    
+                        <h4>🛠 Technicien</h4>
+                        <ul>
+                            <li><strong>Configurer</strong> la plateforme Moodle (hébergement, comptes, structure, droits).</li>
+                            <li><strong>Déployer</strong> Miradore (MDM) sur l’ensemble du parc de tablettes avec l’aide d’un technicien externe bénévole.</li>
+                            <li><strong>Structurer</strong> les droits d’accès et les niveaux d’autonomie selon les profils utilisateurs.</li>
+                            <li><strong>Anticiper</strong> les failles techniques et sécuritaires liées à l’utilisation du matériel mobile.</li>
+                            <li><strong>Documenter</strong> toutes les procédures pour garantir la pérennité du dispositif.</li>
+                        </ul>
+                    
+                        <h4>📚 Créateur de contenu</h4>
+                        <ul>
+                            <li><strong>Produire</strong> des supports pédagogiques adaptés (PowerPoints, fiches PDF, vidéos, gifs).</li>
+                            <li><strong>Adapter</strong> les formats pour des usages variés : formation synchrone, autoformation, documentation interne.</li>
+                            <li><strong>Intégrer</strong> ces contenus dans l’intranet Joomla pour assurer leur accessibilité à tous les collaborateurs.</li>
+                            <li><strong>Concevoir</strong> un guide de développement destiné à l’équipe de l’interprétariat communautaire pour faciliter l’adoption de Moodle.</li>
+                            <li><strong>Mettre à jour</strong> régulièrement les supports selon les retours utilisateurs et les évolutions techniques.</li>
+                        </ul>
+                    </div>
+                
+                    <button class="accordion">Résultats</button>
+                    <div class="panel">
+                        <ul>
+                            <li>Continuité pédagogique assurée durant la pandémie, grâce à la mise en place d’une infrastructure numérique opérationnelle.</li>
+                            <li>Autonomisation des secteurs : usage des outils (visioconférence, guides, Moodle) sans sollicitation technique externe.</li>
+                            <li>Réduction significative des demandes d’assistance technique liées à la visioconférence (presque quotidiennes auparavant).</li>
+                            <li>Adoption pérenne dans plusieurs secteurs (interprétariat communautaire, direction, psychothérapie, secteur formation).</li>
+                            <li>Publication dans le rapport d’activité de l’association comme action exemplaire de modernisation institutionnelle.</li>
+                            <li>Stabilité du dispositif depuis sa mise en place : aucun besoin d’intervention technique majeur signalé depuis 2021.</li>
+                            <li>Échec partiel du volet "tablettes" des Espaces sociaux, suite à un changement de leadership – mis en pause malgré l’infrastructure prête.</li>
+                        </ul>
+                    </div>
+                </article>
+        
         <section id="contact">
             <h2>Contact</h2>
             <p>Email : damian@example.com</p>
@@ -591,4 +663,5 @@
     <script src="config.js"></script>
     <script src="script.js"></script>
     <script type="module" src="chatbot.js"></script>
-    
+</body>
+</html>

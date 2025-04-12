@@ -7,6 +7,96 @@ body {
     color: #333;
 }
 
+/* Header styles */
+.header {
+    background: linear-gradient(135deg, #1F4F82, #D8ECF7); /* Diagonal blue gradient */
+    color: white; /* White font for text */
+    padding: 2rem; /* Add breathing space */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    text-align: left;
+}
+
+/* Header content container */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header text styles */
+.header-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.header h1 {
+    font-size: 2.5rem; /* Large title */
+    font-weight: bold;
+    margin: 0;
+    color: white; /* White font for title */
+}
+
+.subtitle {
+    font-size: 1.2rem; /* Smaller subtitle */
+    margin: 0.5rem 0 1rem;
+    color: white; /* White font for subtitle */
+}
+
+/* Download CV link */
+.download-cv {
+    font-size: 1rem;
+    color: white; /* White font for link */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.download-cv:hover {
+    color: #D8ECF7; /* Light blue on hover */
+}
+
+/* Header image styles */
+.header-image {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.header-image svg {
+    width: 100px;
+    height: 100px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    .header-image {
+        margin-top: 1.5rem;
+    }
+}
+
 header {
     background-color: #0068B7;
     color: white;
@@ -285,6 +375,9 @@ footer {
     right: 10px; /* Position the "next" button on the right */
 }
 
+<a class="prev" onclick="plusSlides(-1, 'slider-digitalisation')">&#10094;</a>
+<a class="next" onclick="plusSlides(1, 'slider-digitalisation')">&#10095;</a>
+
 /* Hover effect for buttons */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
@@ -552,4 +645,54 @@ footer {
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* General styles for the navigation menu */
+nav.menu {
+    background-color: #C5F0E3; /* Mint green background */
+    font-family: "Segoe UI", "Inter", system-ui, sans-serif; /* Modern sans-serif font */
+    padding: 10px 0; /* Subtle padding for spacing */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Remove default list styling */
+nav.menu ul {
+    list-style: none;
+    display: flex; /* Horizontal layout */
+    justify-content: center; /* Center items */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style individual list items */
+nav.menu ul li {
+    margin: 0 15px; /* Even spacing between items */
+}
+
+/* Style the links */
+nav.menu ul li a {
+    text-decoration: none;
+    color: #1F4F82; /* Dark blue text */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+nav.menu ul li a:hover {
+    color: #163A5C; /* Slightly darker blue */
+    text-decoration: underline;
+}
+
+/* Responsive design: stack items vertically on small screens */
+@media (max-width: 768px) {
+    nav.menu ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav.menu ul li {
+        margin: 10px 0; /* Add spacing between vertical items */
+    }
 }
