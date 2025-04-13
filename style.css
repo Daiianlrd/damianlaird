@@ -343,7 +343,7 @@ footer {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 80%; /* Reduce the width of the slideshow */
+    max-width: 100%; /* Reduce the width of the slideshow */
     margin: auto;
     overflow: hidden;
     height: 400px; /* Fix the height of the slideshow container */
@@ -752,4 +752,46 @@ h1, h2, h3 {
     .project-card {
         padding: 1rem; /* Adjust padding for smaller screens */
     }
+}
+
+/* Adjust the height and width of slider-mde-1 to match the table cell images */
+#slider-mde-1,
+#slider-mde-2,
+#slider-mde-3,
+#slider-mde-4 {
+    width: 100%; /* Match the width of the table cell */
+    height: auto; /* Allow the height to adjust proportionally */
+    overflow: hidden; /* Ensure no content overflows */
+}
+
+#slider-mde-1 .slide img,
+#slider-mde-2 .slide img,
+#slider-mde-3 .slide img,
+#slider-mde-4 .slide img {
+    width: 100%; /* Ensure images take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+}
+
+/* Ensure the slideshow fits the table cell */
+table td #slider-mde-1,
+table td #slider-mde-2,
+table td #slider-mde-3,
+table td #slider-mde-4 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+table td #slider-mde-1 .slide img,
+table td #slider-mde-2 .slide img,
+table td #slider-mde-3 .slide img,
+table td #slider-mde-4 .slide img {
+    width: 100% !important; /* Ensure images take up the full width */
+    height: auto !important; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
 }

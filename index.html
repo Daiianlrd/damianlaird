@@ -66,23 +66,23 @@
                 <!-- Slider for Projet 1: Refonte du site web -->
                 <div class="slideshow-container" id="slider-site-web">
                     <div class="slide fade">
-                        <img src="images/2019_app_website.jpg" alt="Capture d'écran 2019" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/2019_app_website.jpg" alt="Capture d'écran 2019" style="width:100%" onclick="openLightbox(this, 'slider-site-web')">
                         <div class="caption">Ancien site web 2011-2019</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/2020_app_accueil.jpg" alt="Capture d'écran 2020 accueil" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/2020_app_accueil.jpg" alt="Capture d'écran 2020 accueil" style="width:100%" onclick="openLightbox(this, 'slider-site-web')">
                         <div class="caption">Site web 2020-2022</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/2020_app_accueil_2.jpg" alt="Capture d'écran 2020 accueil 2" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/2020_app_accueil_2.jpg" alt="Capture d'écran 2020 accueil 2" style="width:100%" onclick="openLightbox(this, 'slider-site-web')">
                         <div class="caption">Site web 2020-2022</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/2025_app_accueil.jpg" alt="Capture d'écran 2025 accueil" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/2025_app_accueil.jpg" alt="Capture d'écran 2025 accueil" style="width:100%" onclick="openLightbox(this, 'slider-site-web')">
                         <div class="caption">Site web 2022-2025</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_prototype_acc.jpg" alt="Capture d'écran prototype 2025" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_prototype_acc.jpg" alt="Capture d'écran prototype 2025" style="width:100%" onclick="openLightbox(this, 'slider-site-web')">
                         <div class="caption">(Prototype) Site web 2025</div>
                     </div>
                     <!-- Navigation buttons -->
@@ -99,9 +99,11 @@
                     <span class="dot" onclick="currentSlide(5, 'slider-site-web')"></span>
                 </div>
                 <!-- Lightbox -->
-                <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-                    <span class="close">&times;</span>
-                    <img class="lightbox-content" id="lightbox-img">
+                <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+                    <span class="close" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 30px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+                    <a class="prev" onclick="changeLightboxSlide(-1)" style="position: absolute; top: 50%; left: 20px; font-size: 30px; color: white; cursor: pointer; transform: translateY(-50%);">&#10094;</a>
+                    <img id="lightbox-img" src="" alt="Lightbox Image" style="max-width: 90%; max-height: 90%; border-radius: 8px;">
+                    <a class="next" onclick="changeLightboxSlide(1)" style="position: absolute; top: 50%; right: 20px; font-size: 30px; color: white; cursor: pointer; transform: translateY(-50%);">&#10095;</a>
                 </div>
                 <button class="accordion">Contexte</button>
                 <div class="panel">
@@ -157,6 +159,25 @@
                             </ul>
                         </li>
                     </ul>
+                
+                </div>
+                <button class="accordion">Stratégie</button>
+                <div class="panel">
+                  <p><strong><a href="#" onclick="goToSlide(1, 'slider-site-web'); return false;">Phase 1 – Refonte initiale :</a></strong> 
+                    Le site précédent était jugé désuet et peu attractif. Les retours d’utilisateurs internes faisaient état d’une navigation confuse et d’une image dépassée. Aucune analyse comportementale n’était possible à ce stade, faute d’outils d’analyse.
+                  </p>
+                
+                  <p><strong><a href="#" onclick="goToSlide(3, 'slider-site-web'); return false;">Phase 2 – Refonte de la page d’accueil :</a></strong> 
+                    À l’aide de Google Analytics, une analyse des flux de comportement a révélé un taux de rebond élevé : les professionnels préféraient contacter la réception plutôt que d’explorer le site. En réponse, la page d’accueil a été repensée : mise en avant des blocs sectoriels avec un code couleur spécifique, ajout de boutons d’appel à l’action (CTA) en rose pour guider vers les formations. La logique éditoriale a été standardisée : colonne droite = infos pratiques, zone centrale = contenu qualitatif.
+                  </p>
+                
+                  <p><strong><a href="#" onclick="goToSlide(4, 'slider-site-web'); return false;">Phase 3 – Refonte 2025 :</a></strong> 
+                    Cette phase vise à consolider l’identité visuelle de l’association. L’ancienne version reposait sur un template Joomla devenu obsolète et difficile à maintenir. Une refonte complète a été décidée pour alléger le code, harmoniser les approches graphiques (voir la <a href="https://adriencater.github.io/appartenances_design/" target="_blank">charte graphique</a>) et faciliter le travail des graphistes. La typographie IBM Plex a été choisie pour sa souplesse et son accessibilité open-source. Un <strong>manuel d’utilisation</strong> a été conçu pour renforcer l’autonomie éditoriale.
+                  </p>
+                
+                  <p><strong>Stratégie globale :</strong> 
+                    Le site web est pensé comme pierre angulaire de la communication institutionnelle. Il sert de référence pour les supports imprimés. Afin de résoudre les problèmes liés aux flyers (versions obsolètes en circulation), la nouvelle stratégie consiste à réduire l’information présente sur les flyers, y ajouter des QR codes renvoyant vers les pages du site web tenues à jour.
+                  </p>
                 </div>
                 <button class="accordion">Mon rôle</button>
                 <div class="panel">
@@ -287,19 +308,19 @@
                 <!-- Slider for Projet 2: Intranet -->
                 <div class="slideshow-container" id="slider-intranet">
                     <div class="slide fade">
-                        <img src="images/25_intra_1.jpg" alt="Capture d'écran Intranet 1" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_intra_1.jpg" alt="Capture d'écran Intranet 1" style="width:100%" onclick="openLightbox(this, 'slider-intranet')">
                         <div class="caption">Intranet - Page d'accueil</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_intra_acc_2.jpg" alt="Capture d'écran Intranet 2" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_intra_acc_2.jpg" alt="Capture d'écran Intranet 2" style="width:100%" onclick="openLightbox(this, 'slider-intranet')">
                         <div class="caption">Intranet - Page d'accueil 2</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_intra_mde.jpg" alt="Capture d'écran Modes d'emploi" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_intra_mde.jpg" alt="Capture d'écran Modes d'emploi" style="width:100%" onclick="openLightbox(this, 'slider-intranet')">
                         <div class="caption">Modes d'emploi</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_intra_annuaire.jpg" alt="Capture d'écran Annuaire" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_intra_annuaire.jpg" alt="Capture d'écran Annuaire" style="width:100%" onclick="openLightbox(this, 'slider-intranet')">
                         <div class="caption">Annuaire</div>
                     </div>
                     <!-- Navigation buttons -->
@@ -314,17 +335,7 @@
                     <span class="dot" onclick="currentSlide(3, 'slider-intranet')"></span>
                     <span class="dot" onclick="currentSlide(4, 'slider-intranet')"></span>
                 </div>
-                <button class="accordion">OBJECTIFS GÉNÉRAUX</button>
-                <div class="panel">
-                    <ul>
-                        <li>Centraliser tous les documents internes liés à la gouvernance, aux RH, aux processus qualité et aux procédures informatiques</li>
-                        <li>Servir d’outil d’onboarding pour les nouveaux collaborateurs</li>
-                        <li>Mettre à disposition un annuaire interne, un fil d’actualités et des ressources interactives</li>
-                        <li>Renforcer la transversalité entre les secteurs, la cohérence documentaire, l’autonomie des équipes, et la visibilité de l’information</li>
-                        <li>Offrir une version destinée aux interprètes communautaires à un stade ultérieur</li>
-                    </ul>
-                </div>
-                <button class="accordion">CONSTAT INITIAL</button>
+                <button class="accordion">CONTEXTE</button>
                 <div class="panel">
                     <ul>
                         <li>Absence de plateforme fonctionnelle (ancien intranet obsolète, non modifiable)</li>
@@ -334,7 +345,18 @@
                         <li>Budget très limité (5000 CHF)</li>
                     </ul>
                 </div>
-                <button class="accordion">STRATÉGIE ADOPTÉE</button>
+                <button class="accordion">OBJECTIFS</button>
+                <div class="panel">
+                    <ul>
+                        <li>Centraliser tous les documents internes liés à la gouvernance, aux RH, aux processus qualité et aux procédures informatiques</li>
+                        <li>Servir d’outil d’onboarding pour les nouveaux collaborateurs</li>
+                        <li>Mettre à disposition un annuaire interne, un fil d’actualités et des ressources interactives</li>
+                        <li>Renforcer la transversalité entre les secteurs, la cohérence documentaire, l’autonomie des équipes, et la visibilité de l’information</li>
+                        <li>Offrir une version destinée aux interprètes communautaires à un stade ultérieur</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">STRATÉGIE </button>
                 <div class="panel">
                     <p><strong>Technique</strong></p>
                     <ul>
@@ -348,16 +370,15 @@
                         <li>Identification automatique via LDAP pour éviter la création manuelle de comptes utilisateurs</li>
                         <li>Configuration des droits d’accès par rôle (documents, rubriques, sections spécifiques)</li>
                     </ul>
+
                     <p><strong>UX :</strong></p>
                     <ul>
                         <li>Mise à disposition de liens pratiques très demandés (système de pointage Tipee, annuaire, journaux) (voir slide 2)</li>
                         <li>Affichage d’un fil d’actualités avec 4 catégories claires : Annonces aux collaborateurs, Événements/Formation, Communication de la direction, Bienvenue.</li>
                         <li>Accès automatisé via un système LDAP connecté au serveur central pour éviter toute friction à la connexion.</li>
                     </ul>
-                    </ul>
-                </div>
-                <button class="accordion">UX / OUTILS</button>
-                <div class="panel">
+
+                    <p><strong>Outils</strong></p>
                     <ul>
                         <li>CMS : Joomla + plugin LDAP</li>
                         <li>Outils de maquettage : PowerPoint</li>
@@ -370,6 +391,7 @@
                         <li>Définition d’un style de navigation similaire au site web public pour faciliter l’appropriation</li>
                     </ul>
                 </div>
+
                 <button class="accordion">MON RÔLE</button>
                 <div class="panel">
                     <ul>
@@ -395,101 +417,184 @@
                 </div>
                 <button class="accordion">Exemples et explications</button>
 <div class="panel">
-    <!-- Premier tableau -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+   <!-- Premier tableau -->
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+    <thead>
         <tr>
-            <!-- Colonne gauche : captures d'écran -->
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Page des modes d'emploi</th>
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Fonctionnalité</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- Colonne gauche : slideshow -->
             <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-                <a href="https://www.example.com" target="_blank">
-                    <img src="images/25_intra_mde.jpg" alt="Capture d'écran 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </a>
-                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 1 : Description de l'image</p>
+                <div class="slideshow-container" id="slider-mde-1">
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde1.jpg" alt="Figure 1 - Slide 1" onclick="openLightbox(this, 'slider-mde-1')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_page2.jpg" alt="Figure 1 - Slide 2" onclick="openLightbox(this, 'slider-mde-1')">
+                    </div>
+                    <!-- Caption -->
+                    <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 1 : Page des modes d'emploi</p>
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'slider-mde-1')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-mde-1')">&#10095;</a>
+                </div>
             </td>
             <!-- Colonne droite : explications -->
             <td style="width: 50%; vertical-align: top; padding: 10px;">
                 <ul>
-                    <li>Explication 1 pour le premier tableau</li>
-                    <li>Explication 2 pour le premier tableau</li>
-                    <li>Explication 3 pour le premier tableau</li>
-                    <li>Explication 4 pour le premier tableau</li>
-                    <li>Explication 5 pour le premier tableau</li>
-                    <li>Explication 6 pour le premier tableau</li>
+                    <li>Centralise les ressources utiles pour l’utilisation des outils transversaux (pointage, Outlook, visioconférence, etc.).</li>
+                    <li>Destinée aux collaborateurs et interprètes communautaires.</li>
+                    <li>Organisée en blocs clairs pour faciliter l’accès rapide à chaque outil.</li>
+                    <li>Mise à jour par le secteur formation, parfois avec le soutien de l’informatique.</li>
+                    <li>Ressource interne très utilisée.</li>
+                    <li>Contenus sous forme de tutoriels statiques ou interactifs.</li>
                 </ul>
             </td>
         </tr>
-    </table>
+    </tbody>
+</table>
 
-    <!-- Deuxième tableau -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+<!-- Deuxième tableau -->
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+    <thead>
         <tr>
-            <!-- Colonne gauche : captures d'écran -->
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Mode d'emploi - ajout d'une signature</th>
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Fonctionnalité</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- Colonne gauche : slideshow -->
             <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-                <a href="https://www.example.com" target="_blank">
-                    <img src="documents/gifs/signature-email-outlook.gif" alt="Capture d'écran 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </a>
-                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 2 : Description de l'image</p>
+                <div class="slideshow-container" id="slider-mde-2">
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_emails.jpg" alt="Figure 2 - Slide 1" onclick="openLightbox(this, 'slider-mde-2')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_email_1.jpg" alt="Figure 2 - Slide 2" onclick="openLightbox(this, 'slider-mde-2')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="documents/gifs/ajout-dun-message-automatique-outlook-etape-1.gif" alt="Figure 2 - Slide 2" onclick="openLightbox(this, 'slider-mde-2')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_lien_téléchargeable.jpg" alt="Figure 2 - Slide 2" onclick="openLightbox(this, 'slider-mde-2')">
+                    </div>
+                    <!-- Caption -->
+                    <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 2 : Tutoriels interactifs</p>
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'slider-mde-2')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-mde-2')">&#10095;</a>
+                </div>
             </td>
             <!-- Colonne droite : explications -->
             <td style="width: 50%; vertical-align: top; padding: 10px;">
-                <ul>
-                    <li>Explication 1 pour le deuxième tableau</li>
-                    <li>Explication 2 pour le deuxième tableau</li>
-                    <li>Explication 3 pour le deuxième tableau</li>
-                    <li>Explication 4 pour le deuxième tableau</li>
-                    <li>Explication 5 pour le deuxième tableau</li>
-                    <li>Explication 6 pour le deuxième tableau</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
 
-    <!-- Troisième tableau -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-        <tr>
-            <!-- Colonne gauche : captures d'écran -->
-            <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-                <a href="https://www.example.com" target="_blank">
-                    <img src="images/25_intra_mde2.jpg" alt="Capture d'écran 3" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </a>
-                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 3 : Description de l'image</p>
-            </td>
-            <!-- Colonne droite : explications -->
-            <td style="width: 50%; vertical-align: top; padding: 10px;">
-                <ul>
-                    <li>Explication 1 pour le troisième tableau</li>
-                    <li>Explication 2 pour le troisième tableau</li>
-                    <li>Explication 3 pour le troisième tableau</li>
-                    <li>Explication 4 pour le troisième tableau</li>
-                    <li>Explication 5 pour le troisième tableau</li>
-                    <li>Explication 6 pour le troisième tableau</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
+                    <ul>
+                        <li>Répond à un besoin d’harmonisation des signatures email à l’échelle de l’institution.</li>
+                        <li>Destiné à l’ensemble des collaborateurs, en particulier ceux ayant des difficultés avec l’informatique.</li>
+                        <li>Conçu par le service communication pour guider pas à pas les utilisateurs.</li>
+                        <li>Tutoriel interactif sous forme de GIF animé avec des ressources cliquables.</li>
+                        <li>Outil largement utilisé, notamment lors de l’arrivée de nouveaux collaborateurs.</li>
+                    </ul>
 
-    <!-- Quatrième tableau -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Troisième tableau -->
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+    <thead>
         <tr>
-            <!-- Colonne gauche : captures d'écran -->
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Mode d'emploi pour l'utilisation d'un smartscreen</th>
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Fonctionnalité</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- Colonne gauche : slideshow -->
             <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
-                <a href="https://www.example.com" target="_blank">
-                    <img src="images/25_intra_annuaire.jpg" alt="Capture d'écran 4" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                </a>
-                <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 4 : Description de l'image</p>
+                <div class="slideshow-container" id="slider-mde-3">
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_écran1.jpg" alt="Figure 3 - Slide 1" onclick="openLightbox(this, 'slider-mde-3')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_écran2.jpg" alt="Figure 3 - Slide 2" onclick="openLightbox(this, 'slider-mde-3')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_écran3.jpg" alt="Figure 3 - Slide 1" onclick="openLightbox(this, 'slider-mde-3')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_écran4.jpg" alt="Figure 3 - Slide 2" onclick="openLightbox(this, 'slider-mde-3')">
+                    </div>                    <div class="slide fade">
+                        <img src="images/25_intra_mde_écran5.jpg" alt="Figure 3 - Slide 1" onclick="openLightbox(this, 'slider-mde-3')">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/25_intra_mde_écran6.jpg" alt="Figure 3 - Slide 2" onclick="openLightbox(this, 'slider-mde-3')">
+                    </div>
+                    <!-- Caption -->
+                    <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 3 : Ressources collaboratives</p>
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'slider-mde-3')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-mde-3')">&#10095;</a>
+                </div>
             </td>
             <!-- Colonne droite : explications -->
             <td style="width: 50%; vertical-align: top; padding: 10px;">
                 <ul>
-                    <li>Explication 1 pour le quatrième tableau</li>
-                    <li>Explication 2 pour le quatrième tableau</li>
-                    <li>Explication 3 pour le quatrième tableau</li>
-                    <li>Explication 4 pour le quatrième tableau</li>
-                    <li>Explication 5 pour le quatrième tableau</li>
-                    <li>Explication 6 pour le quatrième tableau</li>
+                    <ul>
+                        <li>Assure l’autonomie des utilisateurs dans la mise en place de l’écran.</li>
+                        <li>Utilisé lors de formations, réunions et visioconférences à Appartenances.</li>
+                        <li>Destiné à tous les collaborateurs, même non techniques.</li>
+                        <li>Combine vidéo, schémas annotés et explications visuelles.</li>
+                        <li>Également affiché dans la salle pour un accès immédiat.</li>
+                      </ul>
                 </ul>
             </td>
         </tr>
-    </table>
+    </tbody>
+</table>
+
+<!-- Quatrième tableau -->
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+    <thead>
+        <tr>
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Annuaire</th>
+            <th style="width: 50%; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Fonctionnalité</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- Colonne gauche : slideshow -->
+            <td style="width: 50%; vertical-align: top; text-align: center; padding: 10px;">
+                <div class="slideshow-container" id="slider-mde-4">
+                    <div class="slide fade">
+                        <img src="images/25_intra_annuaire.jpg" alt="Figure 4 - Slide 1" onclick="openLightbox(this, 'slider-mde-4')">
+                    </div>
+                    <!-- Caption -->
+                    <p style="margin-top: 10px; font-size: 14px; font-style: italic;">Figure 4 : Annuaire interne</p>
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'slider-mde-4')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-mde-4')">&#10095;</a>
+                </div>
+            </td>
+            <!-- Colonne droite : explications -->
+            <td style="width: 50%; vertical-align: top; padding: 10px;">
+                    <ul>
+                        <li>Outil conçu pour inciter à la consultation de l’intranet et faciliter les contacts internes.</li>
+                        <li>Destiné à l’ensemble du personnel de l’association.</li>
+                        <li>Initialement géré par le secteur FCR, aujourd’hui maintenu par les RH grâce à des marches à suivre claires.</li>
+                        <li>Recherche possible sur tous les champs (nom, secteur, fonction, etc.).</li>
+                        <li>Fonctionnalité la plus utilisée de tout l’intranet.</li>
+                      </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
 </div>
             </article>
         </div>
@@ -501,19 +606,19 @@
                 <!-- Slideshow for Projet 3: Digitalisation de la formation -->
                 <div class="slideshow-container" id="slider-digitalisation">
                     <div class="slide fade">
-                        <img src="images/25_padlet.jpg" alt="Slide 1 - Digitalisation" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_padlet.jpg" alt="Slide 1 - Digitalisation" style="width:100%" onclick="openLightbox(this, 'slider-digitalisation')">
                         <div class="caption">Slide 1 - Présentation générale</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_moodle.jpg" alt="Slide 2 - Formation" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_moodle.jpg" alt="Slide 2 - Formation" style="width:100%" onclick="openLightbox(this, 'slider-digitalisation')">
                         <div class="caption">Slide 2 - Formation</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_zoom.jpg" alt="Slide 3 - Matériel" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_zoom.jpg" alt="Slide 3 - Matériel" style="width:100%" onclick="openLightbox(this, 'slider-digitalisation')">
                         <div class="caption">Slide 3 - Matériel</div>
                     </div>
                     <div class="slide fade">
-                        <img src="images/25_intra_mde_video_explicative.jpg" alt="Slide 4 - Résultats" style="width:100%" onclick="openLightbox(this)">
+                        <img src="images/25_intra_mde_video_explicative.jpg" alt="Slide 4 - Résultats" style="width:100%" onclick="openLightbox(this, 'slider-digitalisation')">
                         <div class="caption">Slide 4 - Résultats</div>
                     </div>
                     <!-- Navigation buttons -->
