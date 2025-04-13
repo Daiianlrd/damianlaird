@@ -45,6 +45,24 @@ document.addEventListener("DOMContentLoaded", () => {
     initSlides("slider-mde-2"); // Add your new slideshow here
     initSlides("slider-mde-3"); // Add your new slideshow here
     initSlides("slider-mde-4"); // Add your new slideshow here
+    initSlides("slider-interpretariat"); // Add your new slideshow here
+        // Add new slideshows for Digitalisation de la formation
+        initSlides("slider-digitalisation-1");
+        initSlides("slider-digitalisation-2");
+        initSlides("slider-digitalisation-3");
+        initSlides("slider-digitalisation-4");
+
+    const toggleBtn = document.getElementById("toggle-more");
+    const moreText = document.getElementById("more-text");
+
+    if (toggleBtn && moreText) {
+        toggleBtn.addEventListener("click", () => {
+            const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+            toggleBtn.setAttribute("aria-expanded", !expanded);
+            moreText.style.display = expanded ? "none" : "block";
+            toggleBtn.textContent = expanded ? "Lire plus" : "Réduire";
+        });
+    }
 });
 
 // Store the current lightbox index and images
@@ -110,3 +128,15 @@ for (let i = 0; i < acc.length; i++) {
         }
     });
 }
+const skillCards = document.querySelectorAll('.skill');
+
+skillCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    skillCards.forEach(c => c.classList.remove('expanded'));
+    card.classList.add('expanded');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('expanded');
+  });
+});
