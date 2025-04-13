@@ -1,7 +1,11 @@
+// Toggle the menu visibility
 function toggleMenu() {
-    const lateralMenu = document.querySelector('.lateral-menu');
-    lateralMenu.classList.toggle('active');
+    const menu = document.querySelector("nav.menu ul");
+    menu.classList.toggle("active");
 }
+
+// Add event listener to the hamburger icon
+document.querySelector(".hamburger").addEventListener("click", toggleMenu);
 
 // Store the current slide index for each slideshow
 const slideIndices = {};

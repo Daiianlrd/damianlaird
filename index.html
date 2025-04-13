@@ -19,15 +19,18 @@
                     </a>
                 </p>
             </div>
-            <div class="header-image">
-                <!-- Placeholder SVG icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="#1F4F82">
-                    <path d="M12 0l3.09 6.26L22 7.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 12.14 2 7.27l6.91-1.01L12 0z"/>
-                </svg>
+            <!-- Profile picture -->
+            <div class="header-photo">
+                <img src="images/portfolio_pic.png" alt="Profile Picture of Damian Laird">
             </div>
         </div>
     </header>
     <nav class="menu">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="#intro">Accueil</a></li>
             <li><a href="#parcours">Parcours</a></li>
@@ -56,7 +59,8 @@
         </section>
         <section id="projets">
             <h2>Projets</h2>
-
+            <!-- Projet 1 -->
+            <div class="project-card">
             <article>
                 <h3>Projet 1 : Refonte du site web</h3>
                 <!-- Slider for Projet 1: Refonte du site web -->
@@ -115,21 +119,21 @@
                         <tbody>
                             <tr>
                                 <td style="border: 1px solid #ddd; padding: 8px;">
-                                    <a href="#" onclick="goToSlide(2); return false;">Phase 1</a>
+                                    <a href="#" onclick="goToSlide(1); return false;">Phase 1</a>
                                 </td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">2020</td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">Nouveau site (structure, design, CMS Joomla)</td>
                             </tr>
                             <tr>
                                 <td style="border: 1px solid #ddd; padding: 8px;">
-                                    <a href="#" onclick="goToSlide(4); return false;">Phase 2</a>
+                                    <a href="#" onclick="goToSlide(3); return false;">Phase 2</a>
                                 </td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">2022</td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">Refonte page d’accueil (UX, bloc secteurs, CTA)</td>
                             </tr>
                             <tr>
                                 <td style="border: 1px solid #ddd; padding: 8px;">
-                                    <a href="#" onclick="goToSlide(5); return false;">Phase 3</a>
+                                    <a href="#" onclick="goToSlide(4); return false;">Phase 3</a>
                                 </td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">2025</td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">Allègement du code, amélioration CMS</td>
@@ -140,7 +144,7 @@
                 <button class="accordion">Objectifs</button>
                 <div class="panel">
                     <ul>
-                        <li>Renouveler l’image de l’institution</li>
+                        <li>Renouveler l’image de l’institution sur la base graphique du site web</li>
                         <li>Accorder une autonomie maximale au secteur de la communication pour la gestion du site</li>
                         <li>Présenter les activités dans le respect des normes et standards EDUQUA</li>
                         <li>Permettre aux secteurs de l’association de valoriser leurs prestations et approches respectives</li>
@@ -275,7 +279,9 @@
                     </table>
                 </div>
             </article>
-
+        </div>
+            <!-- Projet 2 -->
+    <div class="project-card">
             <article>
                 <h3>Projet 2 : Intranet</h3>
                 <!-- Slider for Projet 2: Intranet -->
@@ -486,8 +492,10 @@
     </table>
 </div>
             </article>
-
+        </div>
             <article>
+                    <!-- Projet 3 -->
+    <div class="project-card">
                 <h3>Projet 3 : Digitalisation de la formation</h3>
 
                 <!-- Slideshow for Projet 3: Digitalisation de la formation -->
@@ -651,6 +659,7 @@
                         </ul>
                     </div>
                 </article>
+            </div>
         
         <section id="contact">
             <h2>Contact</h2>

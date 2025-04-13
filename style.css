@@ -78,18 +78,46 @@ body {
     height: 100px;
 }
 
+/* Profile picture container */
+.header-photo {
+    position: absolute; /* Default absolute positioning */
+    top: 20px;
+    right: 10rem; /* Match the padding of the header content */
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Ensure the image stays within the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft box shadow */
+}
+
+/* Profile picture image */
+.header-photo img {
+    width: 100%; /* Ensure the image scales responsively */
+    height: 100%;
+    object-fit: cover; /* Crop the image to fit the circle */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .header {
         text-align: center;
+        flex-direction: column; /* Stack content vertically */
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+        height: auto; /* Allow the header to expand in height */
     }
 
     .header-content {
-        flex-direction: column;
+        flex-direction: column-reverse; /* Reverse the order of elements */
+        align-items: center; /* Center-align content */
+    }
+
+    .header-photo {
+        position: static; /* Remove absolute positioning */
+        margin-bottom: 1rem; /* Add spacing below the picture */
     }
 
     .header-text {
-        text-align: center;
+        text-align: center; /* Center-align the text */
     }
 
     .header-image {
@@ -234,6 +262,7 @@ section {
     font-weight: bold;
     margin-top: 5px;
     font-size: 16px; /* Font size for accordion buttons */
+    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .panel {
@@ -675,7 +704,7 @@ nav.menu ul li a {
     text-decoration: none;
     color: #1F4F82; /* Dark blue text */
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px; /* Increased font size */
     transition: color 0.3s, text-decoration 0.3s; /* Smooth hover effect */
 }
 
@@ -694,5 +723,33 @@ nav.menu ul li a:hover {
 
     nav.menu ul li {
         margin: 10px 0; /* Add spacing between vertical items */
+    }
+
+    nav.menu ul li a {
+        font-size: 18px; /* Slightly smaller font size for mobile screens */
+    }
+}
+
+/* Apply color to all h1, h2, and h3 elements */
+h1, h2, h3 {
+    color: #00497d; /* Dark blue color */
+}
+
+/* Project card styles */
+.project-card {
+    background-color: #C5F0E3; /* Mint green background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 1.5rem; /* Internal spacing */
+    margin: 2rem 0; /* Add vertical spacing above and below each card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    max-width: 900px; /* Limit width */
+    margin-left: auto; /* Center the card */
+    margin-right: auto; /* Center the card */
+}
+
+/* Optional: Ensure the card content is responsive */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 1rem; /* Adjust padding for smaller screens */
     }
 }
