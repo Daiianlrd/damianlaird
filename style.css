@@ -266,7 +266,7 @@ section {
   font-family: 'Open Sans', sans-serif;
   color: #00497d; /* Dark blue text */
   background-color: #EAF9F3; /* Slightly lighter than mint green */
-  border-bottom: 1px solid #ddd; /* Add a subtle divider */
+  border-bottom: 0px solid #ddd; /* Add a subtle divider */
   text-transform: uppercase; /* Make all titles capitalized */
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
 }
@@ -279,7 +279,7 @@ section {
 /* Accordion button (+ icon) */
 .accordion::after {
   content: "+"; /* Add a plus icon */
-  font-size: 18px;
+  font-size: 25px;
   color: #00497d; /* Match the text color */
   transition: transform 0.3s ease;
 }
@@ -292,10 +292,10 @@ section {
 /* Accordion panel */
 .panel {
   display: none;
-  padding: 15px;
+  padding: 5px 10px !important; /* Réduction du padding avec priorité */
   background-color: #F4FCF9; /* Much lighter shade of mint green */
   border-radius: 8px; /* Rounded corners for the container */
-  margin-top: 0.3rem; /* Tighten spacing with the accordion heading */
+  margin-top: 0 !important; /* Supprime complètement l'espace entre le titre et le contenu */
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   color: #00497d; /* Dark blue text */
@@ -303,7 +303,7 @@ section {
 }
 
 .panel.open {
-  display: block; /* Show the panel when active */
+  display: block !important; /* Assurez-vous que le contenu s'affiche correctement */
 }
 
 footer {
