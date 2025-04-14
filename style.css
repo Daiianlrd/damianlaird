@@ -936,3 +936,63 @@ table td #slider-mde-4 .slide img {
 .skill.expanded .skill-projects {
   display: block; /* Show the projects list when expanded */
 }
+
+/* Stats section styles */
+.stats-section {
+    padding: 3rem 1rem; /* Add spacing around the section */
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 1.5rem; /* Space between bubbles */
+    max-width: 1200px; /* Limit the width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.stat-bubble {
+    color: #024731; /* Dark green text for contrast */
+    border: 3px solid #024731; /* Add a border to define the circle */
+    border-radius: 50%; /* Make the bubbles circular */
+    width: 150px; /* Fixed width for larger screens */
+    height: 150px; /* Fixed height for larger screens */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    background: none; /* Remove background */
+}
+
+.stat-bubble h3 {
+    font-size: 1.8rem; /* Larger font size for the stat number */
+    margin: 0; /* Remove default margin */
+    font-weight: bold;
+}
+
+.stat-bubble p {
+    font-size: 1rem; /* Smaller font size for the description */
+    margin: 0.5rem 0 0; /* Add spacing above the text */
+}
+
+.stat-bubble:hover {
+    transform: translateY(-10px); /* Animate upward on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stat-bubble {
+        width: 120px; /* Adjust size for medium screens */
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-bubble {
+        width: 100px; /* Adjust size for small screens */
+        height: 100px;
+    }
+}
