@@ -907,6 +907,7 @@ table td #slider-mde-4 .slide img {
   flex-direction: column; /* Stack content vertically */
   align-items: center; /* Center-align content */
   cursor: pointer; /* Pointer cursor for interactivity */
+  pointer-events: none; /* Disable all interactivity */
 }
 
 .skill i {

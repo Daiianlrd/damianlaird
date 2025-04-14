@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         initSlides("slider-digitalisation-2");
         initSlides("slider-digitalisation-3");
         initSlides("slider-digitalisation-4");
+        initSlides("slider-programme");
 
     const toggleBtn = document.getElementById("toggle-more");
     const moreText = document.getElementById("more-text");
