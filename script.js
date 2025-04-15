@@ -78,6 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
     addSwipeListeners("slider-digitalisation-3");
     addSwipeListeners("slider-digitalisation-4");
     addSwipeListeners("slider-programme");
+
+    // Add tap-to-open-lightbox listeners
+    addTapToOpenLightboxListeners("slider-site-web");
+    addTapToOpenLightboxListeners("slider-intranet");
+    addTapToOpenLightboxListeners("slider-digitalisation");
+    addTapToOpenLightboxListeners("slider-mde-1");
+    addTapToOpenLightboxListeners("slider-mde-2");
+    addTapToOpenLightboxListeners("slider-mde-3");
+    addTapToOpenLightboxListeners("slider-mde-4");
+    addTapToOpenLightboxListeners("slider-interpretariat");
+    addTapToOpenLightboxListeners("slider-digitalisation-1");
+    addTapToOpenLightboxListeners("slider-digitalisation-2");
+    addTapToOpenLightboxListeners("slider-digitalisation-3");
+    addTapToOpenLightboxListeners("slider-digitalisation-4");
+    addTapToOpenLightboxListeners("slider-programme");
 });
 
 // Store the current lightbox index and images
@@ -237,5 +252,41 @@ function addSwipeListeners(slideshowId) {
         slideshowContainer.addEventListener("touchstart", handleTouchStart);
         slideshowContainer.addEventListener("touchmove", handleTouchMove);
         slideshowContainer.addEventListener("touchend", () => handleTouchEnd(slideshowId));
+    }
+}
+
+// Function to handle tap in the center of the slideshow to open the lightbox
+function handleTapToOpenLightbox(event, slideshowId) {
+    const slideshowContainer = document.getElementById(slideshowId);
+    const rect = slideshowContainer.getBoundingClientRect();
+    const tapX = event.touches ? event.touches[0].clientX : event.clientX;
+    const tapY = event.touches ? event.touches[0].clientY : event.clientY;
+
+    // Check if the tap is in the center area of the slideshow
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const centerThreshold = 50; // Adjust this value for the center detection area
+
+    if (
+        Math.abs(tapX - centerX) < centerThreshold &&
+        Math.abs(tapY - centerY) < centerThreshold
+    ) {
+        // Open the lightbox
+        const currentSlide = slideshowContainer.querySelector(
+            `.slide:nth-child(${slideIndices[slideshowId] + 1}) img`
+        );
+        if (currentSlide) {
+            openLightbox(currentSlide, slideshowId);
+        }
+    }
+}
+
+// Add touch event listeners to each slideshow for tap-to-open-lightbox
+function addTapToOpenLightboxListeners(slideshowId) {
+    const slideshowContainer = document.getElementById(slideshowId);
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener("touchend", (event) =>
+            handleTapToOpenLightbox(event, slideshowId)
+        );
     }
 }
