@@ -99,10 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
 let lightboxIndex = 0;
 let lightboxImages = [];
 
-// Variables to track touch positions for lightbox
-let lightboxTouchStartX = 0;
-let lightboxTouchEndX = 0;
-
 // Open the lightbox and initialize the images
 function openLightbox(img, slideshowId) {
     const lightbox = document.getElementById("lightbox");
@@ -115,9 +111,6 @@ function openLightbox(img, slideshowId) {
     // Display the lightbox
     lightbox.style.display = "flex"; // Use flex to center the content
     lightboxImg.src = lightboxImages[lightboxIndex].src;
-
-    // Add swipe listeners for the lightbox
-    addLightboxSwipeListeners();
 }
 
 // Close the lightbox
@@ -143,38 +136,6 @@ function changeLightboxSlide(n) {
     lightboxImg.src = lightboxImages[lightboxIndex].src;
 }
 
-// Function to handle touch start in lightbox
-function handleLightboxTouchStart(event) {
-    lightboxTouchStartX = event.touches[0].clientX;
-}
-
-// Function to handle touch move in lightbox
-function handleLightboxTouchMove(event) {
-    lightboxTouchEndX = event.touches[0].clientX;
-}
-
-// Function to handle touch end and determine swipe direction in lightbox
-function handleLightboxTouchEnd() {
-    const swipeThreshold = 50; // Minimum distance for a swipe
-    if (lightboxTouchEndX - lightboxTouchStartX > swipeThreshold) {
-        // Swipe right
-        changeLightboxSlide(-1);
-    } else if (lightboxTouchStartX - lightboxTouchEndX > swipeThreshold) {
-        // Swipe left
-        changeLightboxSlide(1);
-    }
-}
-
-// Add swipe event listeners to the lightbox
-function addLightboxSwipeListeners() {
-    const lightbox = document.getElementById("lightbox");
-    if (lightbox) {
-        lightbox.addEventListener("touchstart", handleLightboxTouchStart);
-        lightbox.addEventListener("touchmove", handleLightboxTouchMove);
-        lightbox.addEventListener("touchend", handleLightboxTouchEnd);
-    }
-}
-
 // Close lightbox when clicking outside the image
 document.addEventListener("click", (event) => {
     const lightbox = document.getElementById("lightbox");
@@ -182,41 +143,6 @@ document.addEventListener("click", (event) => {
     if (lightbox.style.display === "flex" && !lightboxImg.contains(event.target)) {
         closeLightbox();
     }
-});
-
-function goToSlide(slideNumber) {
-    // Navigue vers le slide correspondant
-    plusSlides(slideNumber - slideIndices["slider-site-web"], "slider-site-web");
-
-    // Défile vers le conteneur du slideshow
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    slideshowContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// Accordion functionality
-const acc = document.getElementsByClassName("accordion");
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
-const skillCards = document.querySelectorAll('.skill');
-
-skillCards.forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    skillCards.forEach(c => c.classList.remove('expanded'));
-    card.classList.add('expanded');
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.classList.remove('expanded');
-  });
 });
 
 // Variables to track touch positions
@@ -290,3 +216,55 @@ function addTapToOpenLightboxListeners(slideshowId) {
         );
     }
 }
+
+// Add touch event listeners to the lightbox for swipe functionality
+function handleLightboxTouchEnd() {
+    const swipeThreshold = 50; // Distance minimale pour un swipe
+    if (touchEndX - touchStartX > swipeThreshold) {
+        // Swipe vers la droite
+        changeLightboxSlide(-1);
+    } else if (touchStartX - touchEndX > swipeThreshold) {
+        // Swipe vers la gauche
+        changeLightboxSlide(1);
+    }
+}
+
+const lightbox = document.getElementById("lightbox");
+lightbox.addEventListener("touchstart", handleTouchStart);
+lightbox.addEventListener("touchmove", handleTouchMove);
+lightbox.addEventListener("touchend", handleLightboxTouchEnd);
+
+function goToSlide(slideNumber) {
+    // Navigue vers le slide correspondant
+    plusSlides(slideNumber - slideIndices["slider-site-web"], "slider-site-web");
+
+    // Défile vers le conteneur du slideshow
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    slideshowContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// Accordion functionality
+const acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+const skillCards = document.querySelectorAll('.skill');
+
+skillCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    skillCards.forEach(c => c.classList.remove('expanded'));
+    card.classList.add('expanded');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('expanded');
+  });
+});

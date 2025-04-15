@@ -467,20 +467,21 @@ footer {
     to {opacity: 1;}
 }
 
-/* Lightbox */
+/* Lightbox container */
 .lightbox {
-    display: none; /* Hidden by default */
+    display: none; /* Caché par défaut */
     position: fixed;
     z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.9); /* Fond semi-transparent noir */
     justify-content: center;
     align-items: center;
 }
 
+/* Lightbox content (image) */
 .lightbox-content {
     max-width: 90%;
     max-height: 90%;
@@ -490,69 +491,37 @@ footer {
     border-radius: 5px;
 }
 
-/* Lightbox navigation arrows */
+/* Navigation arrows */
 .lightbox .prev, .lightbox .next {
-    font-size: 40px; /* Increase the size of the arrows */
-    padding: 10px; /* Add padding for better touch targets */
+    font-size: 40px;
+    padding: 10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better visibility */
-    border-radius: 50%; /* Make the arrows circular */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
     position: absolute;
-    top: 50%; /* Center vertically */
+    top: 50%;
     transform: translateY(-50%);
-    z-index: 1001;
     cursor: pointer;
 }
 
-/* Adjust the position of the arrows */
 .lightbox .prev {
-    left: 20px; /* Move the left arrow further in */
+    left: 20px;
 }
 
 .lightbox .next {
-    right: 20px; /* Move the right arrow further in */
+    right: 20px;
 }
 
-/* Lightbox close button */
+/* Close button */
 .lightbox .close {
-    font-size: 35px; /* Increase the size of the close button */
+    font-size: 35px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    border-radius: 50%; /* Make it circular */
-    padding: 10px; /* Add padding for better touch targets */
-    position: absolute;
-    top: 10px; /* Adjust the vertical position */
-    right: 50%; /* Center horizontally */
-    transform: translateX(50%); /* Adjust for centering */
-    z-index: 1001;
-    cursor: pointer;
-}
-
-.lightbox .close {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
     position: absolute;
     top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
+    right: 20px;
     cursor: pointer;
 }
 
