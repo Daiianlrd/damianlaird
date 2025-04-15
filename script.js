@@ -64,6 +64,20 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleBtn.textContent = expanded ? "Lire plus" : "Réduire";
         });
     }
+
+    addSwipeListeners("slider-site-web");
+    addSwipeListeners("slider-intranet");
+    addSwipeListeners("slider-digitalisation");
+    addSwipeListeners("slider-mde-1");
+    addSwipeListeners("slider-mde-2");
+    addSwipeListeners("slider-mde-3");
+    addSwipeListeners("slider-mde-4");
+    addSwipeListeners("slider-interpretariat");
+    addSwipeListeners("slider-digitalisation-1");
+    addSwipeListeners("slider-digitalisation-2");
+    addSwipeListeners("slider-digitalisation-3");
+    addSwipeListeners("slider-digitalisation-4");
+    addSwipeListeners("slider-programme");
 });
 
 // Store the current lightbox index and images
@@ -141,3 +155,39 @@ skillCards.forEach(card => {
     card.classList.remove('expanded');
   });
 });
+
+// Variables to track touch positions
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Function to handle touch start
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+}
+
+// Function to handle touch move
+function handleTouchMove(event) {
+    touchEndX = event.touches[0].clientX;
+}
+
+// Function to handle touch end and determine swipe direction
+function handleTouchEnd(slideshowId) {
+    const swipeThreshold = 50; // Minimum distance for a swipe
+    if (touchEndX - touchStartX > swipeThreshold) {
+        // Swipe right
+        plusSlides(-1, slideshowId);
+    } else if (touchStartX - touchEndX > swipeThreshold) {
+        // Swipe left
+        plusSlides(1, slideshowId);
+    }
+}
+
+// Add touch event listeners to each slideshow
+function addSwipeListeners(slideshowId) {
+    const slideshowContainer = document.getElementById(slideshowId);
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener("touchstart", handleTouchStart);
+        slideshowContainer.addEventListener("touchmove", handleTouchMove);
+        slideshowContainer.addEventListener("touchend", () => handleTouchEnd(slideshowId));
+    }
+}
