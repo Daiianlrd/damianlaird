@@ -84,6 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
 let lightboxIndex = 0;
 let lightboxImages = [];
 
+// Variables to track touch positions for lightbox
+let lightboxTouchStartX = 0;
+let lightboxTouchEndX = 0;
+
 // Open the lightbox and initialize the images
 function openLightbox(img, slideshowId) {
     const lightbox = document.getElementById("lightbox");
@@ -96,6 +100,9 @@ function openLightbox(img, slideshowId) {
     // Display the lightbox
     lightbox.style.display = "flex"; // Use flex to center the content
     lightboxImg.src = lightboxImages[lightboxIndex].src;
+
+    // Add swipe listeners for the lightbox
+    addLightboxSwipeListeners();
 }
 
 // Close the lightbox
@@ -120,6 +127,47 @@ function changeLightboxSlide(n) {
     const lightboxImg = document.getElementById("lightbox-img");
     lightboxImg.src = lightboxImages[lightboxIndex].src;
 }
+
+// Function to handle touch start in lightbox
+function handleLightboxTouchStart(event) {
+    lightboxTouchStartX = event.touches[0].clientX;
+}
+
+// Function to handle touch move in lightbox
+function handleLightboxTouchMove(event) {
+    lightboxTouchEndX = event.touches[0].clientX;
+}
+
+// Function to handle touch end and determine swipe direction in lightbox
+function handleLightboxTouchEnd() {
+    const swipeThreshold = 50; // Minimum distance for a swipe
+    if (lightboxTouchEndX - lightboxTouchStartX > swipeThreshold) {
+        // Swipe right
+        changeLightboxSlide(-1);
+    } else if (lightboxTouchStartX - lightboxTouchEndX > swipeThreshold) {
+        // Swipe left
+        changeLightboxSlide(1);
+    }
+}
+
+// Add swipe event listeners to the lightbox
+function addLightboxSwipeListeners() {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox) {
+        lightbox.addEventListener("touchstart", handleLightboxTouchStart);
+        lightbox.addEventListener("touchmove", handleLightboxTouchMove);
+        lightbox.addEventListener("touchend", handleLightboxTouchEnd);
+    }
+}
+
+// Close lightbox when clicking outside the image
+document.addEventListener("click", (event) => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    if (lightbox.style.display === "flex" && !lightboxImg.contains(event.target)) {
+        closeLightbox();
+    }
+});
 
 function goToSlide(slideNumber) {
     // Navigue vers le slide correspondant
