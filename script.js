@@ -145,6 +145,41 @@ document.addEventListener("click", (event) => {
     }
 });
 
+function goToSlide(slideNumber) {
+    // Navigue vers le slide correspondant
+    plusSlides(slideNumber - slideIndices["slider-site-web"], "slider-site-web");
+
+    // Défile vers le conteneur du slideshow
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    slideshowContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// Accordion functionality
+const acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+const skillCards = document.querySelectorAll('.skill');
+
+skillCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    skillCards.forEach(c => c.classList.remove('expanded'));
+    card.classList.add('expanded');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('expanded');
+  });
+});
+
 // Variables to track touch positions
 let touchStartX = 0;
 let touchEndX = 0;
@@ -216,55 +251,3 @@ function addTapToOpenLightboxListeners(slideshowId) {
         );
     }
 }
-
-// Add touch event listeners to the lightbox for swipe functionality
-function handleLightboxTouchEnd() {
-    const swipeThreshold = 50; // Distance minimale pour un swipe
-    if (touchEndX - touchStartX > swipeThreshold) {
-        // Swipe vers la droite
-        changeLightboxSlide(-1);
-    } else if (touchStartX - touchEndX > swipeThreshold) {
-        // Swipe vers la gauche
-        changeLightboxSlide(1);
-    }
-}
-
-const lightbox = document.getElementById("lightbox");
-lightbox.addEventListener("touchstart", handleTouchStart);
-lightbox.addEventListener("touchmove", handleTouchMove);
-lightbox.addEventListener("touchend", handleLightboxTouchEnd);
-
-function goToSlide(slideNumber) {
-    // Navigue vers le slide correspondant
-    plusSlides(slideNumber - slideIndices["slider-site-web"], "slider-site-web");
-
-    // Défile vers le conteneur du slideshow
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    slideshowContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// Accordion functionality
-const acc = document.getElementsByClassName("accordion");
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
-const skillCards = document.querySelectorAll('.skill');
-
-skillCards.forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    skillCards.forEach(c => c.classList.remove('expanded'));
-    card.classList.add('expanded');
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.classList.remove('expanded');
-  });
-});
